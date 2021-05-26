@@ -28,6 +28,16 @@ hs_err_pid*
 
 # End of https://www.toptal.com/developers/gitignore/api/java
 
+# IntelliJ project files 
 *.iml
-*.idea
-*.vscode
+*.iws
+*.ipr
+.idea/
+
+# eclipse project file
+.settings/
+.classpath
+.project
+
+# vscode project file
+.vscode/
