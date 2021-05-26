@@ -1,0 +1,10 @@
+- Affichage du décor et personnages sous forme d'image. //Complexe (en tant cas dans l'immédiat je visualise mal la chose) non prioritaire
+- Définir la position initiale sur une case vide à l'entrée. //non prioritaire et simple. nécessite la mise en place du labyrinthe.
+- Mise en place tu plateau/interface sous forme de programme et/ou graphiquement ou seront positionnés les personnages (création d'un tableau). 
+//prioritaire et abordable
+- Mise à jour des coordonnées (déplacement entre les cases de un en un : prendre en compte les flèches de déplacements). //abordable necessite 
+la mise en place du plateau.
+- Mise à jour de la poisition du personnage (donc déplacement du personnage physiquement). //necessite tout le reste.
+- Prendre en compte les murs et la taille du labyrinthe (coordonnées enregistrer au préalable à l'emplacement où seront les murs qui empèchera l'incrementation et
+l'actualisation du personnage si celui-ci arrive sur ces coordonnées). Des tests sur la position du personnage devront être fait si celle ci est valable ou non.
+//necessite la mise en place du plateau
