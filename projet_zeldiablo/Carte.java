@@ -1,6 +1,6 @@
 public class Carte {
 
-    private final Case[][] plateau;
+    private Case[][] plateau;
 
     public Carte() {
         this.plateau = new Case[10][10];

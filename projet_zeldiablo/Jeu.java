@@ -1,6 +1,6 @@
 public class Jeu {
 
-    private final Carte carte;
+    private Carte carte;
 
     public Jeu() {
         this.carte = new Carte();
