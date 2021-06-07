@@ -1,0 +1,11 @@
+fonctionnalite 1 : Déplacement du personnage
+responsable : Keanu Harrell
+
+fonctionnalité 2 : Mise en du systeme d'entites 
+responsable : Gabin Hemmerle
+
+fonctionnalité 3 : Mise en place du labyrinthe
+responsable : Alexis Gregoire
+
+fonctionnalité 4 : Mise en place des collisions
+responsable Yanis Peltre
