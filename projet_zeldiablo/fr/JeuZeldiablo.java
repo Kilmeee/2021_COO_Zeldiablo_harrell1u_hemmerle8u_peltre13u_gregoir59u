@@ -31,8 +31,8 @@ public class JeuZeldiablo implements Jeu {
         this.labyrinthe = new Labyrinthe();
         this.personnage = new Personnage(labyrinthe);
         monstres = new ArrayList<>();
-        monstres.add(new Monstre(100, 100, labyrinthe));
-        monstres.add(new Monstre(300, 300, labyrinthe));
+        monstres.add(new Monstre(3, 3, labyrinthe));
+        monstres.add(new Monstre(5, 5, labyrinthe));
     }
 
     /**
