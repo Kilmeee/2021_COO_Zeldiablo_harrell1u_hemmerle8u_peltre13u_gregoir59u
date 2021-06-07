@@ -8,3 +8,8 @@ la mise en place du plateau.
 - Prendre en compte les murs et la taille du labyrinthe (coordonnées enregistrer au préalable à l'emplacement où seront les murs qui empèchera l'incrementation et
 l'actualisation du personnage si celui-ci arrive sur ces coordonnées). Des tests sur la position du personnage devront être fait si celle ci est valable ou non.
 //necessite la mise en place du plateau et des types de cases.
+
+--------------- CORRECTION fonctionnalites_v1
+
+
+
