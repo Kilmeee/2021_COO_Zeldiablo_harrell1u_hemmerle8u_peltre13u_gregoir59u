@@ -1,4 +1,6 @@
-import moteurJeu.Commande;
+package fr;
+
+import fr.moteurJeu.Commande;
 
 public abstract class Entite {
 

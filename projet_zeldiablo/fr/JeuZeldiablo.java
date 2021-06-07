@@ -1,5 +1,7 @@
-import moteurJeu.Commande;
-import moteurJeu.Jeu;
+package fr;
+
+import fr.moteurJeu.Commande;
+import fr.moteurJeu.Jeu;
 
 /**
  * Classe JeuPerso qui permet de gérer le Jeu.
@@ -8,12 +10,12 @@ import moteurJeu.Jeu;
 public class JeuZeldiablo implements Jeu {
 
     /**
-     * Attribut privé Labyrinthe qui permet de récupérer la taille de celui-ci.
+     * Attribut privé fr.Labyrinthe qui permet de récupérer la taille de celui-ci.
      */
     private Labyrinthe labyrinthe;
 
     /**
-     * Attribut privé Personnage qui permet de gérer le personnage en jeu.
+     * Attribut privé fr.Personnage qui permet de gérer le personnage en jeu.
      */
     private Personnage personnage;
 

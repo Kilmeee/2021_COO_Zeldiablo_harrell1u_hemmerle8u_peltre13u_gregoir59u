@@ -1,4 +1,4 @@
-package moteurJeu;
+package fr.moteurJeu;
 
 import javax.swing.JFrame;
 

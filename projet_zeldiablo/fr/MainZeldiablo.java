@@ -1,4 +1,6 @@
-import moteurJeu.MoteurGraphique;
+package fr;
+
+import fr.moteurJeu.MoteurGraphique;
 
 public class MainZeldiablo {
 

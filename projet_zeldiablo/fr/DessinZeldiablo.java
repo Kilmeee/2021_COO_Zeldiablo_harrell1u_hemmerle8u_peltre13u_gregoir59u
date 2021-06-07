@@ -1,4 +1,6 @@
-import moteurJeu.DessinJeu;
+package fr;
+
+import fr.moteurJeu.DessinJeu;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
