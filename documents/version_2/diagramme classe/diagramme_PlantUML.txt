@@ -1,0 +1,62 @@
+@startuml
+'''classes
+
+class DessinZeldiablo {
+-TAILLE:int
++DessinZeldiablo(JeuZeldiablo)
++dessiner(BufferedImage)
+}
+
+class Labyrinthe{
+-tailleX : int
+-tailleY : int
++getTailleX():int
++getTailleY():int
+}
+
+class Personnage{
++Personnage(int,int,Labyrinthe)
++Personnage(Labyrinthe)
++deplacer(Commande)
+}
+
+abstract class Entite {
+#x :int
+#y :int
++Entite(int,int)
++deplacer(int,int)
++getX():int
++getY():int
+}
+
+class MainZeldiablo {
++main(String[])
+}
+
+class JeuZeldiablo{
++JeuZeldiablo()
++evoluer(Commande)
++etreFini():boolean
++getPersonnage():Personnage
+}
+
+interface DessinJeu{
++dessiner(BufferedImage)
+}
+
+interface Jeu{
++evoluer(Commande)
++etreFini():boolean
+}
+
+'''relations
+Entite <|-- Personnage
+
+JeuZeldiablo <|.. Jeu
+DessinZeldiablo <|.. DessinJeu
+
+Personnage "*" --> "1" Labyrinthe  : -possede
+JeuZeldiablo "*" --> "*" Labyrinthe  : -possede
+JeuZeldiablo "1" --> "*" Personnage  : -possede
+DessinZeldiablo "1" --> "1" JeuZeldiablo  : -possede
+@enduml
