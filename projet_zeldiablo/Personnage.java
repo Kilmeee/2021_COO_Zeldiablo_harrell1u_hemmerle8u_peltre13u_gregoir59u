@@ -19,19 +19,5 @@ public class Personnage extends Entite {
         super(lab);
     }
 
-    /**
-     * Méthode deplacer qui consiste à déplacer le personnage en fonction du paramètre Commande.
-     * @param direction
-     */
-    public void deplacer(Commande direction){
-        if (direction.haut){
-            this.y--;
-        } else if (direction.bas){
-            this.y++;
-        } else if (direction.gauche){
-            this.x--;
-        } else if (direction.droite){
-            this.x++;
-        }
-    }
+
 }

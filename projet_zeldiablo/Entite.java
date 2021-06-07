@@ -1,3 +1,5 @@
+import moteurJeu.Commande;
+
 public abstract class Entite {
 
     private Labyrinthe lab;
@@ -15,9 +17,20 @@ public abstract class Entite {
         this.lab = lab;
     }
 
-    public void deplacer(int x, int y) {
-        this.x = x;
-        this.y = y;
+    /**
+     * Méthode deplacer qui consiste à déplacer le personnage en fonction du paramètre Commande.
+     * @param direction
+     */
+    public void deplacer(Commande direction){
+        if (direction.haut && y > 0){
+            this.y--;
+        } else if (direction.bas && y < 590){
+            this.y++;
+        } else if (direction.gauche && x >0){
+            this.x--;
+        } else if (direction.droite && x < 990){
+            this.x++;
+        }
     }
 
     public int getX() {
