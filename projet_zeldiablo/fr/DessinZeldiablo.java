@@ -25,7 +25,12 @@ public class DessinZeldiablo implements DessinJeu {
     @Override
     public void dessiner(BufferedImage image) {
         Graphics2D g = (Graphics2D) image.getGraphics();
-        g.setColor(Color.RED);
+        //Création du héro
+        g.setColor(Color.BLUE);
         g.fillOval(jeuZeldiablo.getPersonnage().getX() * TAILLE, jeuZeldiablo.getPersonnage().getY() * TAILLE, 10, 10);
+
+        //Création des monstre
+        g.setColor(Color.RED);
+        jeuZeldiablo.getMonstres().forEach(monstre -> g.fillOval(monstre.getX() * TAILLE, monstre.getY() * TAILLE, 10, 10));
     }
 }

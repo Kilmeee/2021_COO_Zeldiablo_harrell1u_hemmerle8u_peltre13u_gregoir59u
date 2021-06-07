@@ -3,6 +3,9 @@ package fr;
 import fr.moteurJeu.Commande;
 import fr.moteurJeu.Jeu;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Classe JeuPerso qui permet de gérer le Jeu.
  */
@@ -19,12 +22,17 @@ public class JeuZeldiablo implements Jeu {
      */
     private Personnage personnage;
 
+    private List<Monstre> monstres;
+
     /**
      * Constructeur de base qui initialise le Jeu.
      */
     public JeuZeldiablo() {
         this.labyrinthe = new Labyrinthe();
         this.personnage = new Personnage(labyrinthe);
+        monstres = new ArrayList<>();
+        monstres.add(new Monstre(100, 100, labyrinthe));
+        monstres.add(new Monstre(300, 300, labyrinthe));
     }
 
     /**
@@ -45,5 +53,9 @@ public class JeuZeldiablo implements Jeu {
 
     public Personnage getPersonnage() {
         return personnage;
+    }
+
+    public List<Monstre> getMonstres() {
+        return monstres;
     }
 }
