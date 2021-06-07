@@ -22,7 +22,7 @@ public class JeuZeldiablo implements Jeu {
      */
     public JeuZeldiablo() {
         this.labyrinthe = new Labyrinthe();
-        this.personnage = new Personnage(0, 0);
+        this.personnage = new Personnage(labyrinthe);
     }
 
     /**
@@ -33,7 +33,7 @@ public class JeuZeldiablo implements Jeu {
 
     @Override
     public void evoluer(Commande commandeUser) {
-
+        personnage.deplacer(commandeUser);
     }
 
     @Override

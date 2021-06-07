@@ -1,6 +1,6 @@
 public abstract class Entite {
 
-    private int x, y;
+    protected int x, y;
 
     public Entite() {
         this.x = 0;
@@ -17,4 +17,11 @@ public abstract class Entite {
         this.y = y;
     }
 
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
 }

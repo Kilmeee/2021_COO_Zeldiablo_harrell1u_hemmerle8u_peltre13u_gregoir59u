@@ -2,8 +2,6 @@ import moteurJeu.Commande;
 
 public class Personnage extends Entite {
 
-    private int x;
-    private int y;
     private Labyrinthe labyrinthe;
 
     /**
@@ -33,31 +31,12 @@ public class Personnage extends Entite {
     public void deplacer(Commande direction){
         if (direction.haut){
             this.y--;
-        }
-        if (direction.bas){
+        } else if (direction.bas){
             this.y++;
-        }
-        if (direction.gauche){
+        } else if (direction.gauche){
             this.x--;
-        }
-        if (direction.droite){
+        } else if (direction.droite){
             this.x++;
         }
-    }
-
-    /**
-     * Getter de x.
-     * @return
-     */
-    public int getPosX(){
-        return x;
-    }
-
-    /**
-     * Getter de y.
-     * @return
-     */
-    public int getPosY(){
-        return y;
     }
 }
