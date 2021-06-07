@@ -1,2 +1,26 @@
-diagramme séquence: deplacer(Commande) -> Personnage
-http://www.plantuml.com/plantuml/png/RP1DQWCn38NtFeN8AeNE1KmfWIuAXK3NpKeTYyP5_gb7pfrwZbwiahDe3DqOlNcVz1vps0IRzCHEeZ31yUTRpYKG1AgCApKTu9NQLdB63t9LwRZ6YbbWbufGRyyDwpb-TVB7MUy0Dr1cNlga_aOS8hvpyIytOk3gkfcl_Yz-85MbSwVbqMw31yQiFVNIFcQv1ttk7AuIBoWqufrnYkjjnUbIk5FRFvMKC0UwWKUuFWPRYjBNt_0_VYqIQFvW-m_BCWHCjZfMnLoR9yzwdiomuK0vzCI_
+diagramme séquence: deplacer(Commande) -> Entite
+@startuml
+title Méthode deplacer de Entite
+participant "moteurGraphique:MoteurGraphique" as mot
+participant "jeuZeldiablo:JeuZeldiablo" as jeu
+
+participant "e:Entite" as entite
+
+[-> mot : lancerJeu(int, int)
+activate mot
+
+mot -> jeu : evoluer(Commande)
+activate jeu
+
+jeu -> entite : deplacer(Commande)
+activate entite
+
+jeu <-- entite
+deactivate entite
+
+mot <-- jeu
+deactivate jeu
+
+[<-- mot
+deactivate mot
+@enduml
