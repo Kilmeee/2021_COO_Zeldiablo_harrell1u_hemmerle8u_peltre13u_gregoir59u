@@ -40,4 +40,8 @@ public class JeuZeldiablo implements Jeu {
     public boolean etreFini() {
         return false;
     }
+
+    public Personnage getPersonnage() {
+        return personnage;
+    }
 }
