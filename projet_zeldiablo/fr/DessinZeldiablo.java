@@ -1,4 +1,6 @@
-import moteurJeu.DessinJeu;
+package fr;
+
+import fr.moteurJeu.DessinJeu;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -12,7 +14,7 @@ public class DessinZeldiablo implements DessinJeu {
     /**
      * Constante entière qui permet de mettre la taille en pixel de chaque déplacement.
      */
-    private final int TAILLE = 2;
+    private final int TAILLE = 1;
 
     private JeuZeldiablo jeuZeldiablo;
 

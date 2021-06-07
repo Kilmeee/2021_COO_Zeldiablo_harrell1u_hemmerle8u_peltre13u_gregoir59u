@@ -1,4 +1,4 @@
-package moteurJeu;
+package fr.moteurJeu;
 
 /**
  * permet de representer une commande de l'utilisateur

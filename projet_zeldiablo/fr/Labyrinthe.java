@@ -1,3 +1,5 @@
+package fr;
+
 public class Labyrinthe {
 
     private int tailleX = 100;
