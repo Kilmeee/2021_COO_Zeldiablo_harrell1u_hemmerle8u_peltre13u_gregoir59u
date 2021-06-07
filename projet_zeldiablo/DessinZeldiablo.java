@@ -12,7 +12,7 @@ public class DessinZeldiablo implements DessinJeu {
     /**
      * Constante entière qui permet de mettre la taille en pixel de chaque déplacement.
      */
-    private final int TAILLE = 10;
+    private final int TAILLE = 2;
 
     private JeuZeldiablo jeuZeldiablo;
 
@@ -24,6 +24,6 @@ public class DessinZeldiablo implements DessinJeu {
     public void dessiner(BufferedImage image) {
         Graphics2D g = (Graphics2D) image.getGraphics();
         g.setColor(Color.RED);
-        g.fillOval(jeuZeldiablo.getPersonnage().getX() * TAILLE, jeuZeldiablo.getPersonnage().getY() * TAILLE, 50, 50);
+        g.fillOval(jeuZeldiablo.getPersonnage().getX() * TAILLE, jeuZeldiablo.getPersonnage().getY() * TAILLE, 10, 10);
     }
 }

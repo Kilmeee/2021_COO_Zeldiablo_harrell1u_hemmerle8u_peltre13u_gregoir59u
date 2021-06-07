@@ -1,10 +1,11 @@
 public class Labyrinthe {
 
-    private int tailleX = 40;
-    private int tailleY = 40;
+    private int tailleX = 100;
+    private int tailleY = 60;
+
 
     public Labyrinthe() {
-        
+
     }
 
     public int getTailleX() {
