@@ -37,8 +37,4 @@ public class TestV2 {
         personnage.deplacer(commande);
         assertEquals("La postion apres deplacement devrait etre a 2",11,personnage.getX());
     }
-
-
-
-
 }

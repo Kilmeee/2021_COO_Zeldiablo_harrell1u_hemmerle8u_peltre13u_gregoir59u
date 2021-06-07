@@ -9,8 +9,8 @@ public abstract class Entite {
     protected int x, y;
 
     public Entite(Labyrinthe lab) {
-        this.x = lab.getTailleX()/2;
-        this.y = lab.getTailleY()/2;
+        this.x = 0;
+        this.y = 0;
     }
 
     public Entite(int x, int y, Labyrinthe lab) {
@@ -24,13 +24,15 @@ public abstract class Entite {
      * @param direction
      */
     public void deplacer(Commande direction){
-        if (direction.haut && y > 0){
+        int valX = x * Labyrinthe.TAILLE_CASE;
+        int valY = y * Labyrinthe.TAILLE_CASE;
+        if (direction.haut && valY > 0){
             this.y--;
-        } else if (direction.bas && y < 590){
+        } else if (direction.bas && valY < 600 - Labyrinthe.TAILLE_CASE){
             this.y++;
-        } else if (direction.gauche && x >0){
+        } else if (direction.gauche && valX >0){
             this.x--;
-        } else if (direction.droite && x < 990){
+        } else if (direction.droite && valX < 1000 - Labyrinthe.TAILLE_CASE){
             this.x++;
         }
     }
