@@ -2,17 +2,13 @@ import moteurJeu.Commande;
 
 public class Personnage extends Entite {
 
-    private Labyrinthe labyrinthe;
-
     /**
      * Constructeur qui défjnit la postion initiale en paramètres
      * @param x
      * @param y
-     * @param lab
      */
     public Personnage(int x, int y, Labyrinthe lab) {
-        super(x, y);
-        this.labyrinthe = lab;
+        super(x, y, lab);
     }
 
     /**
@@ -20,8 +16,7 @@ public class Personnage extends Entite {
      * @param lab
      */
     public Personnage(Labyrinthe lab){
-        super(lab.getTailleX()/2, lab.getTailleY()/2 );
-        this.labyrinthe = lab;
+        super(lab);
     }
 
     /**

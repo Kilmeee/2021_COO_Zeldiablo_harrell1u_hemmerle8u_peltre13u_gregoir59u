@@ -1,15 +1,18 @@
 public abstract class Entite {
 
+    private Labyrinthe lab;
+
     protected int x, y;
 
-    public Entite() {
-        this.x = 0;
-        this.y = 0;
+    public Entite(Labyrinthe lab) {
+        this.x = lab.getTailleX()/2;
+        this.y = lab.getTailleY()/2;
     }
 
-    public Entite(int x, int y) {
+    public Entite(int x, int y, Labyrinthe lab) {
         this.x = x;
         this.y = y;
+        this.lab = lab;
     }
 
     public void deplacer(int x, int y) {
