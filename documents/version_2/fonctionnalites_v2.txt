@@ -1,3 +1,5 @@
+*fonctionnalites
+
 fonctionnalite 1 : Déplacement du personnage
 responsable : Keanu Harrell
 
@@ -7,5 +9,20 @@ responsable : Gabin Hemmerle
 fonctionnalité 3 : Mise en place du labyrinthe
 responsable : Alexis Gregoire
 
-fonctionnalité 4 : Mise en place des collisions
+fonctionnalité 4 : Mise en place des collisions bordure labyrinthe
 responsable Yanis Peltre
+
+*realisation
+-Classe Entite, Test Entite et diagramme de classe
+responsable : Hemmerle Gabin
+
+-Classe Entite, Personnage, JeuZeldiablo, DessinZeldiablo et diagrame de séquence pour la fonctionnalité "seDeplacer"
+responsable : Harrell Keanu
+
+-Classe Labyrinthe
+
+-Classe Entite, Labyrinthe, JeuZediablo, DessinZeldiablo.
+responsable : Yanis Peltre
+
+-Classe Labyrinthe, JeuZeldiablo
+responsable : Alexis Gregoire
