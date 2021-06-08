@@ -23,14 +23,14 @@ public class TestV2 {
     @Test
     public void test_constructeur_Entite() {
         Labyrinthe lab = new Labyrinthe();
-        Personnage personnage = new Personnage(10,11);
-        Monstre monstre = new Monstre(20,2);
+        Personnage personnage = new Personnage(0,1);
+        Monstre monstre = new Monstre(0,0);
         personnage.ajouterLab(lab);
         monstre.ajouterLab(lab);
-        assertEquals("position x differente pour personnage.",10, personnage.getX());
-        assertEquals("position y differente pour personnage.",11, personnage.getY());
-        assertEquals("position x differente pour monstre.",20, monstre.getX());
-        assertEquals("position y differente pour monstre.",21, monstre.getY());
+        assertEquals("position x differente pour personnage.",0, personnage.getX());
+        assertEquals("position y differente pour personnage.",1, personnage.getY());
+        assertEquals("position x differente pour monstre.",0, monstre.getX());
+        assertEquals("position y differente pour monstre.",0, monstre.getY());
     }
 
     @Test
@@ -48,13 +48,13 @@ public class TestV2 {
 
     @Test public void test_methode_isCaseVide() {
         Labyrinthe lab = new Labyrinthe();
-        Personnage personnageQuiBloque = new Personnage(10,10);
-        Personnage personnageQuiBouge = new Personnage(10,11);
+        Monstre monstreQuiBloque = new Monstre(0,0);
+        Personnage personnageQuiBouge = new Personnage(0,1);
         personnageQuiBouge.ajouterLab(lab);
-        personnageQuiBloque.ajouterLab(lab);
+        monstreQuiBloque.ajouterLab(lab);
         Commande commande = new Commande();
         commande.haut = true;
         personnageQuiBouge.deplacer(commande);
-        assertEquals("La postion devrait rester à 11",11,personnageQuiBouge.getY());
+        assertEquals("La postion devrait rester à 11",1,personnageQuiBouge.getY());
     }
 }

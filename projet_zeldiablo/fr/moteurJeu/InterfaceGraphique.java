@@ -1,6 +1,7 @@
 package fr.moteurJeu;
 
 import javax.swing.JFrame;
+import java.awt.*;
 
 
 /**
