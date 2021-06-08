@@ -1,4 +1,3 @@
-diagramme séquence: deplacer(Commande) -> fr.placeable.entites.Entite
 @startuml
 title Méthode deplacer de fr.placeable.entites.Entite
 participant "moteurGraphique:MoteurGraphique" as mot

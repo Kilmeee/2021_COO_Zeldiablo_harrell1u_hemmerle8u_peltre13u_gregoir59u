@@ -1,0 +1,18 @@
+@startuml
+
+
+participant "piege:Piege" as piege
+participant "e:Entite" as e
+
+[-> piege : declencher(Entite)
+activate piege
+
+piege -> e : diminuerPv(int)
+activate e
+piege <-- e
+deactivate e
+
+[<-- piege
+deactivate piege
+
+@enduml

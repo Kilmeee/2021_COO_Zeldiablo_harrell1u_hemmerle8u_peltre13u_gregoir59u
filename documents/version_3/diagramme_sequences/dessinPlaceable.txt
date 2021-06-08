@@ -1,0 +1,31 @@
+@startuml
+participant "dessin:DessinZeldiablo" as dessin
+participant "jeu:JeuZeldiablo" as jeu
+participant "lab:Labyrinthe" as lab
+participant "pla:Placeable" as pla
+
+[-> dessin : dessiner(BufferedImage)
+activate dessin
+loop indice i
+    loop indice i1
+
+        dessin -> jeu : getLabyrinthe()
+        activate jeu
+        dessin <-- jeu : lab
+        deactivate jeu
+
+        dessin -> lab : getCarte()
+        activate lab
+        dessin <-- lab : carte[][]
+        deactivate lab
+
+        dessin -> pla : carte[i1][i]
+        activate pla
+        dessin <-- pla
+        deactivate pla
+    end
+end
+
+[<-- dessin
+deactivate dessin
+@enduml

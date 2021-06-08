@@ -16,18 +16,15 @@ import java.awt.image.BufferedImage;
 public class DessinZeldiablo implements DessinJeu {
 
     private JeuZeldiablo jeuZeldiablo;
-    private boolean dessine;
 
     public DessinZeldiablo(JeuZeldiablo jeuZeldiablo) {
         this.jeuZeldiablo = jeuZeldiablo;
-        dessine = false;
     }
 
     @Override
     public void dessiner(BufferedImage image) {
         Graphics2D g = (Graphics2D) image.getGraphics();
 
-        dessine = true;
         for (int i = 0; i < jeuZeldiablo.getLabyrinthe().getTailleY(); i++) {
             for (int i1 = 0; i1 < jeuZeldiablo.getLabyrinthe().getTailleX(); i1++) {
                 jeuZeldiablo.getLabyrinthe().getCarte()[i][i1].dessiner(g, i, i1);
