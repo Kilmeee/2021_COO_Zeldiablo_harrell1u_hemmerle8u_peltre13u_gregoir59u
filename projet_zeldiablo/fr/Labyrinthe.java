@@ -11,20 +11,20 @@ public class Labyrinthe {
     public Labyrinthe() {
         CaseVide cv = new CaseVide();
         Mur mur = new Mur();
-        Case [][] lab {
-            {-,-,-,-,-,-,-,-,-,-,-,-,-mur--mur--},
-            {-murmurmurmurmurmurmur-mur-murmurmurmur-----},
-            {-------mur-mur-mur-----mur--},
-            {-murmurmurmurmur-mur-mur-murmurmur-mur-murmurmur},
-            {-mur---mur-mur-----mur-mur----},
-            {-mur-murmurmurmurmur-murmurmur-mur-mur-murmurmur},
-            {---------murmurmur-murmurmur---mur},
-            {mur-murmurmurmurmur-murmurmurmur-mur---mur-mur},
-            {----mur---mur----mur-murmurmur-mur},
-            {-mur------mur---murmur-mur---mur},
-            {-mur--mur-murmurmurmur--murmurmurmur-mur-mur},
-            {----mur----mur-------mur--},
-        }
+        Placeable[][] lab = new Placeable[][]{
+                {cv,cv,cv,cv,cv,cv,cv,cv,cv,mur,cv,cv,cv,cv,mur,cv,cv,mur,cv,cv},
+                {cv,mur,mur,mur,mur,mur,mur,mur,cv,mur,cv,mur,mur,mur,mur,cv,cv,cv,cv,cv},
+                {cv,cv,cv,cv,cv,cv,cv,mur,cv,mur,cv,mur,cv,cv,cv,cv,cv,mur,cv,cv},
+                {cv,mur,mur,mur,mur,mur,cv,mur,cv,mur,cv,mur,mur,mur,cv,mur,cv,mur,mur,mur},
+                {cv,mur,cv,cv,cv,mur,cv,mur,cv,cv,cv,cv,cv,mur,cv,mur,cv,cv,cv,cv},
+                {cv,mur,cv,mur,mur,mur,mur,mur,cv,mur,mur,mur,cv,mur,cv,mur,cv,mur,mur,mur},
+                {cv,cv,cv,cv,cv,cv,cv,cv,cv,mur,mur,mur,cv,mur,mur,mur,cv,cv,cv,mur},
+                {mur,cv,mur,mur,mur,mur,mur,cv,mur,mur,mur,mur,cv,mur,cv,cv,cv,mur,cv,mur},
+                {cv,cv,cv,cv,mur,cv,cv,cv,mur,cv,cv,cv,cv,mur,cv,mur,mur,mur,cv,mur},
+                {cv,mur,cv,cv,cv,cv,cv,cv,mur,cv,cv,cv,mur,mur,cv,mur,cv,cv,cv,mur},
+                {cv,mur,cv,cv,mur,cv,mur,mur,mur,mur,cv,cv,mur,mur,mur,mur,cv,mur,cv,mur},
+                {cv,cv,cv,cv,mur,cv,cv,cv,cv,mur,cv,cv,cv,cv,cv,cv,cv,mur,cv,cv},
+        };
     }
 
     public int getTaillemur() {

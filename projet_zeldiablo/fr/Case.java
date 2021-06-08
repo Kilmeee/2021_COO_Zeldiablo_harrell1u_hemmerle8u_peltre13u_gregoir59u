@@ -1,5 +1,5 @@
 package fr;
 
-public abstract class Case {
+public abstract class Case implements Placeable {
 
 }
