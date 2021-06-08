@@ -73,7 +73,6 @@ public abstract class Entite extends Placeable {
         } else {
             this.pv -= degats;
         }
-        System.out.println(pv);
     }
 
     public boolean ajouterLab(Labyrinthe lab) {
@@ -92,6 +91,5 @@ public abstract class Entite extends Placeable {
                 monstre.diminuerPv(this.degats);
             }
         });
-        c.attaquer=false;
     }
 }

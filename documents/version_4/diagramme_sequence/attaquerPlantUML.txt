@@ -1,0 +1,14 @@
+@startuml
+title Méthode attaquer
+participant "jeu:JeuZeldiablo" as j
+participant "entite:Entite" as e
+participant "monstre:Monstre" as m
+j -> e : attaquer(Commande)
+activate e
+e -> m : diminuerPv(int)
+activate m
+e <- m :
+deactivate m
+j <- e
+deactivate e
+@enduml

@@ -1,0 +1,31 @@
+*fonctionnalites
+
+fonctionnalite 1 : Refini tout le fonctionnement en remplaçant les instanceof par des méthodes dit polymorphisms.
+responsable : Keanu Harrell
+
+fonctionnalité 2 : attaquer les entités
+responsable : Gabin Hemmerle
+
+fonctionnalité 3 : Mise en place de la mort des entités
+responsable : Alexis Gregoire
+
+fonctionnalité 4 : Affichage sur l'interface des point de vie des différentes entités
+responsable Yanis Peltre
+
+*realisation
+-Classe Entite, Commande, Controleur
+responsable : Hemmerle Gabin
+Permet à un personnage d'attaquer un monstre (uniquement les monstres pour le moment) en étant collé à un monstre
+et en appuyant sur la touche 'e'. Les classes Controleur et Commande on dûs être modifiée en conséquence.
+
+-Classe Placeable
+responsable : Harrell Keanu
+Redéfini tout le code pour que celui ci n'utilise plus 'instanceof' il a donc touché à un peu toute les fonctions filles à Placeable (polymorphisms)
+
+-Classe DessinZeldiablo
+responsable : Yanis Peltre
+Permet d'afficher les points de vie des monstres et du personnage en tant réel.
+
+-Classe Entite, Monstre, Personnage
+responsable : Alexis Gregoire
+à 0 point de vie le monstre meurt et devient gris et ne peut pu rien faire

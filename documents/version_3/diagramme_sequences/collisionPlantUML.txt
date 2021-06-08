@@ -1,4 +1,5 @@
 @startuml
+title Méthode collision
 participant "jeu:JeuZeldiablo" as j
 participant "entite:Entite" as e
 participant "laby:Labyrinthe" as l

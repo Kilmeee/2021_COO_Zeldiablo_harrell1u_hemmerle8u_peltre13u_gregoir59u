@@ -17,6 +17,11 @@ public class Monstre extends Entite {
         this.degats = 1;
     }
 
+    /**
+     *
+     * @param lab
+     * @return
+     */
     @Override
     public boolean ajouterLab(Labyrinthe lab) {
         boolean res = super.ajouterLab(lab);

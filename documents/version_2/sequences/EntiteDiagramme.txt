@@ -1,0 +1,9 @@
+@startuml
+title Entite
+
+participant "jeu:JeuZeldiablo" as jeu
+participant "entite:Entite" as ent
+
+create ent
+jeu -> ent : new
+@enduml

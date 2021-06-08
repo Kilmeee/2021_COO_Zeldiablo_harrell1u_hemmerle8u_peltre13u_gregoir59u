@@ -108,7 +108,7 @@ public class Controleur implements KeyListener {
 			public void run() {
 				commandeEnCours.attaquer=false;
 			}
-		},400);
+		},300);
 
 	}
 
