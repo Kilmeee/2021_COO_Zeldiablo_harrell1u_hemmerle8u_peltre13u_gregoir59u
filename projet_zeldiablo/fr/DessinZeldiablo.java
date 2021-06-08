@@ -31,7 +31,7 @@ public class DessinZeldiablo implements DessinJeu {
         for (int i = 0; i < jeuZeldiablo.getLabyrinthe().getTailleY(); i++) {
             for (int i1 = 0; i1 < jeuZeldiablo.getLabyrinthe().getTailleX(); i1++) {
                 if(jeuZeldiablo.getLabyrinthe().getCarte()[i][i1] instanceof Mur)
-                    g.fillRect(i1*50, i*50, 50, 50);
+                    g.fillRect(i1*Labyrinthe.TAILLE_CASE, i*Labyrinthe.TAILLE_CASE, Labyrinthe.TAILLE_CASE, Labyrinthe.TAILLE_CASE);
                 else if(jeuZeldiablo.getLabyrinthe().getCarte()[i][i1] instanceof Piege &&
                         ((Declanchable)(jeuZeldiablo.getLabyrinthe().getCarte()[i][i1])).isTrouver()){
                     g.setColor(brun);
