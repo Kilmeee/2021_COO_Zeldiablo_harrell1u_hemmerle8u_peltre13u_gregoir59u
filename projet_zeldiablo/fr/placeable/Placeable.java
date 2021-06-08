@@ -18,7 +18,7 @@ public abstract class Placeable {
     public void declencher() {
     }
 
-    public boolean isCaseVide() {
+    public boolean isCaseVide(int x, int y) {
         return false;
     }
 

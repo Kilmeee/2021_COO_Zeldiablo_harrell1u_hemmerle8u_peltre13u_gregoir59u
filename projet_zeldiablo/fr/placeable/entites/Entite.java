@@ -28,19 +28,18 @@ public abstract class Entite extends Placeable {
      * @param direction
      */
     public void deplacer(Commande direction){
-        if (direction.haut && y > 0 && lab.getCarte()[y-1][x].isCaseVide()){
+        if (direction.haut && y > 0 && lab.getCarte()[y-1][x].isCaseVide(x, y-1)){
             this.y--;
-            lab.getCarte()[y][x].declencher();
-        } else if (direction.bas && y < lab.getTailleY()-1 && lab.getCarte()[y+1][x].isCaseVide()){
+        } else if (direction.bas && y < lab.getTailleY()-1 && lab.getCarte()[y+1][x].isCaseVide(x, y+1)){
             this.y++;
-            lab.getCarte()[y][x].declencher();
-        } else if (direction.gauche && x >0 && lab.getCarte()[y][x-1].isCaseVide()){
+        } else if (direction.gauche && x >0 && lab.getCarte()[y][x-1].isCaseVide(x-1, y)){
             this.x--;
-            lab.getCarte()[y][x].declencher();
-        } else if (direction.droite && x < lab.getTailleX()-1 && lab.getCarte()[y][x+1].isCaseVide()){
+        } else if (direction.droite && x < lab.getTailleX()-1 && lab.getCarte()[y][x+1].isCaseVide(x+1, y)){
             this.x++;
-            lab.getCarte()[y][x].declencher();
+        } else {
+            return;
         }
+        lab.getCarte()[y][x].declencher();
     }
 
     public int getX() {
@@ -52,7 +51,11 @@ public abstract class Entite extends Placeable {
     }
 
     public boolean ajouterLab(Labyrinthe lab) {
-        this.lab = lab;
-        return false;
+        boolean res = false;
+        if(lab.getCarte()[y][x].isCaseVide(x, y)) {
+            this.lab = lab;
+            res = true;
+        }
+        return res;
     }
 }
