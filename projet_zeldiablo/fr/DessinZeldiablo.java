@@ -41,14 +41,19 @@ public class DessinZeldiablo implements DessinJeu {
 
         jeuZeldiablo.getMonstres().forEach(monstre -> monstre.dessiner(g, 0, 0));
 
+        dessinerBarrePv(g);
+
+    }
+
+    private void dessinerBarrePv(Graphics2D g){
         g.setColor(Color.BLACK);
         g.drawLine(0, 600, 1000,600);
 
         Font font = new Font("Serif", Font.BOLD, 18);
         g.setFont(font);
-        StringBuilder textPv = new StringBuilder("Nombre de PV -->   Joueur :" + jeuZeldiablo.getPersonnage().getPv());
+        StringBuilder textPv = new StringBuilder("Nombre de PV →   Joueur : " + jeuZeldiablo.getPersonnage().getPv());
         for(int i = 0; i < jeuZeldiablo.getMonstres().size(); i++){
-            textPv.append("   Monstre ").append((i+1)).append(" :").append(jeuZeldiablo.getMonstres().get(i).getPv());
+            textPv.append("   Monstre ").append((i+1)).append(" : ").append(jeuZeldiablo.getMonstres().get(i).getPv());
         }
         g.drawString(textPv.toString(), 5, 615);
     }
