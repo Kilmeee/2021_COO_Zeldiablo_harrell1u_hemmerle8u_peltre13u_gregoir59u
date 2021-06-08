@@ -6,6 +6,8 @@ import java.awt.*;
 
 public class Personnage extends Entite {
 
+
+
     /**
      * Constructeur qui défjnit la postion initiale en paramètres
      * @param x
@@ -30,4 +32,5 @@ public class Personnage extends Entite {
         g.fillOval(x * Labyrinthe.TAILLE_CASE, y * Labyrinthe.TAILLE_CASE
                 , Labyrinthe.TAILLE_CASE, Labyrinthe.TAILLE_CASE);
     }
+
 }

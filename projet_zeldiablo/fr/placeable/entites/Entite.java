@@ -30,16 +30,16 @@ public abstract class Entite extends Placeable {
     public void deplacer(Commande direction){
         if (direction.haut && y > 0 && lab.getCarte()[y-1][x].isCaseVide()){
             this.y--;
-            lab.getCarte()[y][x].declencher();
+            lab.getCarte()[y][x].declencher(jeu.getPersonnage());
         } else if (direction.bas && y < lab.getTailleY()-1 && lab.getCarte()[y+1][x].isCaseVide()){
             this.y++;
-            lab.getCarte()[y][x].declencher();
+            lab.getCarte()[y][x].declencher(jeu.getPersonnage());
         } else if (direction.gauche && x >0 && lab.getCarte()[y][x-1].isCaseVide()){
             this.x--;
-            lab.getCarte()[y][x].declencher();
+            lab.getCarte()[y][x].declencher(jeu.getPersonnage());
         } else if (direction.droite && x < lab.getTailleX()-1 && lab.getCarte()[y][x+1].isCaseVide()){
             this.x++;
-            lab.getCarte()[y][x].declencher();
+            lab.getCarte()[y][x].declencher(jeu.getPersonnage());
         }
     }
 
@@ -54,5 +54,9 @@ public abstract class Entite extends Placeable {
     public boolean ajouterLab(Labyrinthe lab) {
         this.lab = lab;
         return false;
+    }
+    public void diminuerPv(int degat){
+        pv = pv - degat;
+        System.out.println(pv);
     }
 }
