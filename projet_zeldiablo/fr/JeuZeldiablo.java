@@ -56,6 +56,7 @@ public class JeuZeldiablo implements Jeu {
     @Override
     public void evoluer(Commande commandeUser) {
         personnage.deplacer(commandeUser);
+        personnage.attaquer(commandeUser);
     }
 
     @Override

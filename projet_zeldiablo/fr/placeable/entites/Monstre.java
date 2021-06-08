@@ -14,6 +14,7 @@ public class Monstre extends Entite {
     public Monstre() {
         super();
         this.pv = 10;
+        this.degats = 1;
     }
 
     @Override
@@ -25,11 +26,12 @@ public class Monstre extends Entite {
 
     @Override
     public void dessiner(Graphics2D g, int i, int i1) {
-        g.setColor(Color.RED);
+        if(this.isDead()) {
+            g.setColor(Color.darkGray);
+        }else{
+            g.setColor(Color.RED);
+        }
         g.fillOval(x * Labyrinthe.TAILLE_CASE, y * Labyrinthe.TAILLE_CASE
                 , Labyrinthe.TAILLE_CASE, Labyrinthe.TAILLE_CASE);
     }
-
-
-
 }
