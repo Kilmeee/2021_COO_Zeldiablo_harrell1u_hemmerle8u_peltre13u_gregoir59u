@@ -13,11 +13,7 @@ public class Piege extends Declanchable{
 
     public void declencher(Entite e) {
         if(!isTrouver()) trouver = true;
-        if(e.getPv() - 5 <= 0) {
-            e.setPv(0);
-        }else {
-            e.diminuerPv(5);
-        }
+        e.diminuerPv(5);
     }
 
     @Override

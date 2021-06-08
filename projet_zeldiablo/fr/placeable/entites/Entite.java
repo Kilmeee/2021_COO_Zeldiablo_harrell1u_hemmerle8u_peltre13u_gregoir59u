@@ -9,18 +9,19 @@ public abstract class Entite extends Placeable {
 
     private Labyrinthe lab;
 
-    protected int x, y;
-
-    protected int pv;
+    protected int x, y, pv;
+    protected boolean dead;
 
     public Entite() {
         this.x = 0;
         this.y = 0;
+        this.dead = false;
     }
 
     public Entite(int x, int y) {
         this.x = x;
         this.y = y;
+        this.dead = false;
     }
 
     /**
@@ -28,6 +29,11 @@ public abstract class Entite extends Placeable {
      * @param direction
      */
     public void deplacer(Commande direction){
+        if(dead) {
+            System.out.println("Vous ne pouvez pas vous déplacer car vous êtes mort.");
+            return;
+        }
+
         if (direction.haut && y > 0 && lab.getCarte()[y-1][x].isCaseVide(x, y-1)){
             this.y--;
         } else if (direction.bas && y < lab.getTailleY()-1 && lab.getCarte()[y+1][x].isCaseVide(x, y+1)){
@@ -50,16 +56,13 @@ public abstract class Entite extends Placeable {
         return y;
     }
 
-    public int getPv() {
-        return this.pv;
-    }
-
-    public void setPv(int p) {
-        this.pv = p;
-    }
-
     public void diminuerPv(int degats){
-        this.pv -= degats;
+        if(this.pv - degats <= 0) {
+            this.pv = 0;
+            this.dead = true;
+        } else {
+            this.pv -= degats;
+        }
         System.out.println(pv);
     }
 

@@ -1,6 +1,5 @@
 package fr.placeable;
 
-import fr.Labyrinthe;
 import fr.placeable.cases.Case;
 import fr.placeable.entites.Monstre;
 
