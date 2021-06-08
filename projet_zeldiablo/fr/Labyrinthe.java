@@ -4,8 +4,8 @@ public class Labyrinthe {
 
     public static int TAILLE_CASE = 50;
 
-    private int tailleX = 100;
-    private int tailleY = 60;
+    private int tailleX;
+    private int tailleY;
 
     private Placeable[][] carte;
 
@@ -16,7 +16,7 @@ public class Labyrinthe {
 
         CaseVide cv = new CaseVide();
         Mur mur = new Mur();
-        Placeable[][] lab = new Placeable[][]{
+        this.carte = new Placeable[][]{
                 {cv,cv,cv,cv,cv,cv,cv,cv,cv,mur,cv,cv,cv,cv,mur,cv,cv,mur,cv,cv},
                 {cv,mur,mur,mur,mur,mur,mur,mur,cv,mur,cv,mur,mur,mur,mur,cv,cv,cv,cv,cv},
                 {cv,cv,cv,cv,cv,cv,cv,mur,cv,mur,cv,mur,cv,cv,cv,cv,cv,mur,cv,cv},
