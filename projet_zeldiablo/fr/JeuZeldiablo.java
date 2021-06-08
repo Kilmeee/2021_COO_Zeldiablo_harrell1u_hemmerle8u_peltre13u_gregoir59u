@@ -24,6 +24,8 @@ public class JeuZeldiablo implements Jeu {
 
     private List<Monstre> monstres;
 
+    private Placeable[][] carte;
+
     /**
      * Constructeur de base qui initialise le Jeu.
      */
@@ -57,5 +59,22 @@ public class JeuZeldiablo implements Jeu {
 
     public List<Monstre> getMonstres() {
         return monstres;
+    }
+
+    private void initialiserCarte() {
+        this.carte = new Placeable[][]{
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {}
+        };
     }
 }

@@ -2,7 +2,7 @@ package fr;
 
 import fr.moteurJeu.Commande;
 
-public abstract class Entite {
+public abstract class Entite implements Placeable {
 
     private Labyrinthe lab;
 
@@ -11,6 +11,7 @@ public abstract class Entite {
     public Entite(Labyrinthe lab) {
         this.x = 0;
         this.y = 0;
+        this.lab = lab;
     }
 
     public Entite(int x, int y, Labyrinthe lab) {
@@ -24,15 +25,13 @@ public abstract class Entite {
      * @param direction
      */
     public void deplacer(Commande direction){
-        int valX = x * Labyrinthe.TAILLE_CASE;
-        int valY = y * Labyrinthe.TAILLE_CASE;
-        if (direction.haut && valY > 0){
+        if (direction.haut && y > 0){
             this.y--;
-        } else if (direction.bas && valY < 600 - Labyrinthe.TAILLE_CASE){
+        } else if (direction.bas && y < lab.getTailleY()-1){
             this.y++;
-        } else if (direction.gauche && valX >0){
+        } else if (direction.gauche && x >0){
             this.x--;
-        } else if (direction.droite && valX < 1000 - Labyrinthe.TAILLE_CASE){
+        } else if (direction.droite && x < lab.getTailleX()-1){
             this.x++;
         }
     }
