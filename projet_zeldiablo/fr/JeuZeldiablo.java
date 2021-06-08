@@ -70,4 +70,8 @@ public class JeuZeldiablo implements Jeu {
     public Labyrinthe getLabyrinthe() {
         return labyrinthe;
     }
+
+    public Personnage getPersonnage() {
+        return personnage;
+    }
 }

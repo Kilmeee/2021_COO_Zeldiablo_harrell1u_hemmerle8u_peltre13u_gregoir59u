@@ -28,26 +28,17 @@ public abstract class Entite extends Placeable {
      * @param direction
      */
     public void deplacer(Commande direction){
-        System.out.println(lab.getCarte()[y][x]);
         if (direction.haut && y > 0 && lab.getCarte()[y-1][x].isCaseVide()){
-            lab.getCarte()[y][x] = new CaseVide();
             this.y--;
-            lab.getCarte()[y][x] = this;
             lab.getCarte()[y][x].declencher();
         } else if (direction.bas && y < lab.getTailleY()-1 && lab.getCarte()[y+1][x].isCaseVide()){
-            lab.getCarte()[y][x] = new CaseVide();
             this.y++;
-            lab.getCarte()[y][x] = this;
             lab.getCarte()[y][x].declencher();
         } else if (direction.gauche && x >0 && lab.getCarte()[y][x-1].isCaseVide()){
-            lab.getCarte()[y][x] = new CaseVide();
             this.x--;
-            lab.getCarte()[y][x] = this;
             lab.getCarte()[y][x].declencher();
         } else if (direction.droite && x < lab.getTailleX()-1 && lab.getCarte()[y][x+1].isCaseVide()){
-            lab.getCarte()[y][x] = new CaseVide();
             this.x++;
-            lab.getCarte()[y][x] = this;
             lab.getCarte()[y][x].declencher();
         }
     }
@@ -60,14 +51,8 @@ public abstract class Entite extends Placeable {
         return y;
     }
 
-    @Override
     public boolean ajouterLab(Labyrinthe lab) {
-        boolean res = false;
-        if(lab.getCarte()[y][x].isCaseVide()) {
-            this.lab = lab;
-            lab.getCarte()[y][x] = this;
-            res = true;
-        }
-        return res;
+        this.lab = lab;
+        return false;
     }
 }

@@ -22,10 +22,6 @@ public abstract class Placeable {
         return false;
     }
 
-    public boolean ajouterLab(Labyrinthe lab) {
-        return false;
-    }
-
     public void dessiner(Graphics2D g, int i, int i1) {
 
     }

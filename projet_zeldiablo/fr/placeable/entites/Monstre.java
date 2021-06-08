@@ -19,8 +19,12 @@ public class Monstre extends Entite {
 
     @Override
     public boolean ajouterLab(Labyrinthe lab) {
-        boolean res = super.ajouterLab(lab);
-        if(res) jeu.getMonstres().add(this);
+        boolean res = false;
+        if(lab.getCarte()[y][x].isCaseVide()) {
+            lab.getCarte()[y][x] = this;
+            jeu.getMonstres().add(this);
+            res = true;
+        }
         return res;
     }
 
