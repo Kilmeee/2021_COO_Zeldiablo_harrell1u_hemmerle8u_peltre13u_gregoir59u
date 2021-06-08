@@ -1,0 +1,30 @@
+*fonctionnalites
+
+fonctionnalite 1 : Affichage graphique des murs et mise à jour affichage.
+responsable : Keanu Harrell
+
+fonctionnalité 2 : Collisions 
+responsable : Gabin Hemmerle
+
+fonctionnalité 3 : Mise en place de la topologie du labyrinthe
+responsable : Alexis Gregoire
+
+fonctionnalité 4 : Mise en place de piège 
+responsable Yanis Peltre
+
+*realisation
+-Classe Entite, Test Entite collision, Labyrinthe
+responsable : Hemmerle Gabin
+Empchèche le personnage d'avancer s'il arrive devant autre chose qu'une case vide.
+
+-Classe DessinZeldiablo
+responsable : Harrell Keanu
+Dessine les cases murs et met à jour la position personnage, l'activation piège ect.
+
+-Classe Piege, Trigger
+responsable : Yanis Peltre
+Fait en sorte d'activer le piège lorsque le personnage passe dessus
+
+-Classe Labyrinthe
+responsable : Alexis Gregoire
+Définir les murs, pièges sur la carte.

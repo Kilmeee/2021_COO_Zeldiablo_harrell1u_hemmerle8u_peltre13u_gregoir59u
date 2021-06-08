@@ -1,0 +1,13 @@
+@startuml
+participant "jeu:JeuZeldiablo" as j
+participant "entite:Entite" as e
+participant "laby:Labyrinthe" as l
+j -> e : deplacer(Commande)
+activate e
+e -> l : isCaseVide(int, int)
+activate l
+e <- l : boolean
+deactivate l
+j <- e
+deactivate e
+@enduml
