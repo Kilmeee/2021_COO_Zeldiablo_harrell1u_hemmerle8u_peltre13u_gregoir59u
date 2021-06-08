@@ -29,10 +29,4 @@ public class Personnage extends Entite {
         super(lab);
         this.pv = 20;
     }
-
-
-    @Override
-    public String getType() {
-        return "p";
-    }
 }

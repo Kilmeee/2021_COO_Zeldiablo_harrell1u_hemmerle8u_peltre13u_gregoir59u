@@ -43,6 +43,6 @@ public class Labyrinthe {
     }
 
     public void ajouterLab(Placeable placeable, int x, int y) {
-        if(!(this.carte[x][y] instanceof Mur)) this.carte[x][y] = placeable;
+        if(this.carte[x][y] instanceof CaseVide) this.carte[x][y] = placeable;
     }
 }

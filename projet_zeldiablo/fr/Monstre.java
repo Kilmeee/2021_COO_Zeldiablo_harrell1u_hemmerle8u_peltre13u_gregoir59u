@@ -18,9 +18,4 @@ public class Monstre extends Entite {
     public Color getColor() {
         return null;
     }
-
-    @Override
-    public String getType() {
-        return "e";
-    }
 }
