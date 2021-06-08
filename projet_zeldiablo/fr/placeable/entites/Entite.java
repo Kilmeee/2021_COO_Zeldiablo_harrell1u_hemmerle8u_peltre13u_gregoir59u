@@ -51,6 +51,10 @@ public abstract class Entite extends Placeable {
         return y;
     }
 
+    public int getPv() {
+        return this.pv;
+    }
+
     public boolean ajouterLab(Labyrinthe lab) {
         this.lab = lab;
         return false;
