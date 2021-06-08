@@ -56,6 +56,10 @@ public abstract class Entite extends Placeable {
         return y;
     }
 
+    public int getPv(){
+        return this.pv;
+    }
+
     public void diminuerPv(int degats){
         if(this.pv - degats <= 0) {
             this.pv = 0;

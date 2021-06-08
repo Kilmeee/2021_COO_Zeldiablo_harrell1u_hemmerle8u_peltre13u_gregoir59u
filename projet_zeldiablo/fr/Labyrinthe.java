@@ -23,12 +23,14 @@ public class Labyrinthe {
 
         CaseVide cv = new CaseVide();
         Mur mur = new Mur();
-        Piege pg = new Piege();
+        Piege pg1 = new Piege();
+        Piege pg2 = new Piege();
+        Piege pg3 = new Piege();
         Trigger tg = new Trigger();
         this.carte = new Placeable[][]{
                 {cv,cv,cv,cv,cv,cv,cv,cv,cv,mur,cv,cv,cv,cv,mur,cv,cv,mur,cv,cv},
                 {cv,mur,mur,mur,mur,mur,mur,mur,cv,mur,cv,mur,mur,mur,mur,cv,cv,cv,cv,cv},
-                {cv,cv,cv,cv,cv,cv,cv,mur,cv,mur,cv,mur,cv,cv,cv,cv,cv,mur,cv,cv},
+                {cv,cv,cv,cv,cv,cv,cv,mur,cv,mur,cv,mur,cv,cv,pg3,cv,cv,mur,cv,cv},
                 {cv,mur,mur,mur,mur,mur,cv,mur,cv,mur,cv,mur,mur,mur,cv,mur,cv,mur,mur,mur},
                 {cv,mur,cv,cv,cv,mur,cv,mur,cv,cv,cv,cv,cv,mur,cv,mur,cv,cv,cv,cv},
                 {cv,mur,cv,mur,mur,mur,mur,mur,cv,mur,mur,mur,cv,mur,cv,mur,cv,mur,mur,mur},
@@ -36,8 +38,8 @@ public class Labyrinthe {
                 {mur,cv,mur,mur,mur,mur,mur,cv,mur,mur,mur,mur,cv,mur,cv,cv,cv,mur,cv,mur},
                 {cv,cv,cv,cv,mur,cv,cv,cv,mur,cv,cv,cv,cv,mur,cv,mur,mur,mur,cv,mur},
                 {cv,mur,cv,cv,tg,cv,cv,cv,mur,cv,cv,cv,mur,mur,cv,mur,cv,cv,cv,mur},
-                {cv,mur,cv,cv,mur,cv,mur,mur,mur,mur,cv,cv,mur,mur,mur,mur,cv,mur,cv,mur},
-                {cv,cv,cv,cv,mur,cv,cv,cv,cv,mur,cv,cv,pg,cv,cv,cv,cv,mur,cv,cv}
+                {cv,mur,cv,cv,mur,cv,mur,mur,mur,mur,cv,cv,mur,mur,mur,mur,cv,mur,pg2,mur},
+                {cv,cv,cv,cv,mur,cv,cv,cv,cv,mur,cv,cv,pg1,cv,cv,cv,cv,mur,cv,cv}
         };
     }
 

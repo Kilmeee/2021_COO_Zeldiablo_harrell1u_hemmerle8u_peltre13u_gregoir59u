@@ -30,4 +30,6 @@ public class Monstre extends Entite {
                 , Labyrinthe.TAILLE_CASE, Labyrinthe.TAILLE_CASE);
     }
 
+
+
 }

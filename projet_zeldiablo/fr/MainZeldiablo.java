@@ -10,7 +10,7 @@ public class MainZeldiablo {
 
         MoteurGraphique moteurGraphique = new MoteurGraphique(jeuZeldiablo, dessinZeldiablo);
 
-        moteurGraphique.lancerJeu(1000, 600);
+        moteurGraphique.lancerJeu(1000, 620);
 
         System.out.println("Le jeu est fini !");
     }

@@ -26,6 +26,7 @@ public class Personnage extends Entite {
         this.pv = 20;
     }
 
+
     @Override
     public void dessiner(Graphics2D g, int i, int i1) {
         g.setColor(Color.BLUE);
