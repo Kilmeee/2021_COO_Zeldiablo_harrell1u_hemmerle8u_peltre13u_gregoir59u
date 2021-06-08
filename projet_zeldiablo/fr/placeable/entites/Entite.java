@@ -50,6 +50,14 @@ public abstract class Entite extends Placeable {
         return y;
     }
 
+    public int getPv() {
+        return this.pv;
+    }
+
+    public void setPv(int p) {
+        this.pv = p;
+    }
+
     public void diminuerPv(int degats){
         this.pv -= degats;
         System.out.println(pv);
