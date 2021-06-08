@@ -29,4 +29,5 @@ public class Monstre extends Entite {
         g.fillOval(x * Labyrinthe.TAILLE_CASE, y * Labyrinthe.TAILLE_CASE
                 , Labyrinthe.TAILLE_CASE, Labyrinthe.TAILLE_CASE);
     }
+
 }

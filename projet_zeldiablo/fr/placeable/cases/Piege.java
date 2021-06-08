@@ -1,6 +1,8 @@
 package fr.placeable.cases;
 
 import fr.placeable.Declanchable;
+import fr.placeable.entites.Entite;
+import fr.placeable.entites.Personnage;
 
 import java.awt.*;
 
@@ -9,10 +11,9 @@ public class Piege extends Declanchable{
         super();
     }
 
-    @Override
-    public void declencher() {
+    public void declencher(Entite e) {
         if(!isTrouver()) trouver = true;
-            System.out.println("piege");
+        e.diminuerPv(5);
     }
 
     @Override

@@ -2,6 +2,7 @@ package fr.placeable;
 
 import fr.JeuZeldiablo;
 import fr.Labyrinthe;
+import fr.placeable.entites.Entite;
 
 import java.awt.*;
 
@@ -15,7 +16,7 @@ public abstract class Placeable {
         lab = labyrinthe;
     }
 
-    public void declencher() {
+    public void declencher(Entite e) {
     }
 
     public boolean isCaseVide(int x, int y) {
