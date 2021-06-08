@@ -37,4 +37,16 @@ public class TestV2 {
         personnage.deplacer(commande);
         assertEquals("La postion apres deplacement devrait etre a 2",11,personnage.getX());
     }
+
+
+
+    @Test public void test_methode_isCaseVide() {
+        Labyrinthe lab = new Labyrinthe();
+        Personnage personnageQuiBloque = new Personnage(10,10,lab);
+        Personnage personnageQuiBouge = new Personnage(10,11,lab);
+        Commande commande = new Commande();
+        commande.haut = true;
+        personnageQuiBouge.deplacer(commande);
+        assertEquals("La postion devrait rester à 11",11,personnageQuiBouge.getY());
+    }
 }

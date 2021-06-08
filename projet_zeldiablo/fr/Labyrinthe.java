@@ -34,6 +34,11 @@ public class Labyrinthe {
         System.out.println(carte[0][5]);
     }
 
+    public boolean isCaseVide(int x, int y){
+        return (carte[x][y] instanceof Traversable);
+    }
+
+
     public int getTailleX() {
         return tailleX;
     }
@@ -44,5 +49,9 @@ public class Labyrinthe {
 
     public void ajouterLab(Placeable placeable, int x, int y) {
         if(this.carte[x][y] instanceof CaseVide) this.carte[x][y] = placeable;
+    }
+
+    public Placeable[][] getCarte(){
+        return this.carte;
     }
 }
