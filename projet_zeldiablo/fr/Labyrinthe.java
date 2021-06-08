@@ -47,13 +47,13 @@ public class Labyrinthe {
         return (carte[y][x] instanceof Traversable);
     }
 
-    public boolean isPiege(int x, int y){
-        return (carte[y][x] instanceof Piege);
+    public void isDeclenchable(int x, int y){
+        if (carte[y][x] instanceof Declanchable){
+            Declanchable dec = (Declanchable) carte[y][x];
+            dec.declencher();
+        }
     }
 
-    public boolean isTriggerCase(int x, int y){
-        return (carte[y][x] instanceof Trigger);
-    }
 
 
     public int getTailleX() {

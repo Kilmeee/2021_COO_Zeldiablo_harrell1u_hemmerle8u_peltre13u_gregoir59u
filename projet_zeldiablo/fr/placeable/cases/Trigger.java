@@ -1,4 +1,14 @@
 package fr.placeable.cases;
 
-public class Trigger extends Case implements Traversable{
+import fr.placeable.Declanchable;
+
+public class Trigger extends Declanchable {
+    public Trigger(){
+        super();
+    }
+    @Override
+    public void declencher() {
+        if(!isTrouver()) trouver = true;
+        System.out.println("trigger");
+    }
 }

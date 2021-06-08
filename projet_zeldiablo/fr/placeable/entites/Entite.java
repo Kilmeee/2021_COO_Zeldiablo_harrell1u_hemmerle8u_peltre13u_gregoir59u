@@ -33,32 +33,16 @@ public abstract class Entite implements Placeable {
     public void deplacer(Commande direction){
         if (direction.haut && y > 0 && lab.isCaseVide(x,y-1)){
             this.y--;
-            if (lab.isPiege(x,y)){
-                System.out.println("piege");
-            }else if (lab.isTriggerCase(x,y)){
-                System.out.println("Trigger");
-            }
+            lab.isDeclenchable(x,y);
         } else if (direction.bas && y < lab.getTailleY()-1 && lab.isCaseVide(x,y+1)){
             this.y++;
-            if (lab.isPiege(x,y)){
-                System.out.println("piege");
-            }else if (lab.isTriggerCase(x,y)){
-                System.out.println("Trigger");
-            }
+            lab.isDeclenchable(x,y);
         } else if (direction.gauche && x >0 && lab.isCaseVide(x-1,y)){
             this.x--;
-            if (lab.isPiege(x,y)){
-                System.out.println("piege");
-            }else if (lab.isTriggerCase(x,y)){
-                System.out.println("Trigger");
-            }
+            lab.isDeclenchable(x,y);
         } else if (direction.droite && x < lab.getTailleX()-1 && lab.isCaseVide(x+1,y)){
             this.x++;
-            if (lab.isPiege(x,y)){
-                System.out.println("piege");
-            }else if (lab.isTriggerCase(x,y)){
-                System.out.println("Trigger");
-            }
+            lab.isDeclenchable(x,y);
         }
     }
 

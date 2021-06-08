@@ -1,10 +1,15 @@
 package fr.placeable.cases;
 
-public class Piege extends Case implements Traversable{
-    public Piege(){
-        /**public void declencherPiege(){
-            en attente du systeme de vie
+import fr.placeable.Declanchable;
 
-        }*/
+public class Piege extends Declanchable{
+    public Piege(){
+        super();
+    }
+
+    @Override
+    public void declencher() {
+        if(!isTrouver()) trouver = true;
+            System.out.println("piege");
     }
 }
