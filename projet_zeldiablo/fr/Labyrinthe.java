@@ -4,12 +4,13 @@ public class Labyrinthe {
 
     public static int TAILLE_CASE = 50;
 
-    private int tailleX = 100;
-    private int tailleY = 60;
+    private int tailleX;
+    private int tailleY;
 
 
     public Labyrinthe() {
-
+        this.tailleX = 20;
+        this.tailleY = 12;
     }
 
     public int getTailleX() {
