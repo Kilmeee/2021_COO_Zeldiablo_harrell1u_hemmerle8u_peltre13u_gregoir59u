@@ -14,7 +14,7 @@ public class Trigger extends Declanchable {
     @Override
     public void declencher(Entite e) {
         if(!isTrouver()) trouver = true;
-        System.out.println("trigger");
+        System.out.println("Case déclencheur");
     }
 
     @Override
