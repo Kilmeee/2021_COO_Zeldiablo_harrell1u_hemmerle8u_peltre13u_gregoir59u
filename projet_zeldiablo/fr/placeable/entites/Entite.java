@@ -60,6 +60,10 @@ public abstract class Entite extends Placeable {
         return this.pv;
     }
 
+    public boolean isDead() {
+        return this.dead;
+    }
+
     public void diminuerPv(int degats){
         if(this.pv - degats <= 0) {
             this.pv = 0;

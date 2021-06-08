@@ -7,7 +7,6 @@ import java.awt.*;
 public class Personnage extends Entite {
 
 
-
     /**
      * Constructeur qui défjnit la postion initiale en paramètres
      * @param x
@@ -29,7 +28,11 @@ public class Personnage extends Entite {
 
     @Override
     public void dessiner(Graphics2D g, int i, int i1) {
-        g.setColor(Color.BLUE);
+        if(this.isDead()) {
+            g.setColor(Color.darkGray);
+        }else{
+            g.setColor(Color.BLUE);
+        }
         g.fillOval(x * Labyrinthe.TAILLE_CASE, y * Labyrinthe.TAILLE_CASE
                 , Labyrinthe.TAILLE_CASE, Labyrinthe.TAILLE_CASE);
     }
