@@ -31,8 +31,9 @@ public class JeuZeldiablo implements Jeu {
         this.labyrinthe = new Labyrinthe();
         this.personnage = new Personnage(labyrinthe);
         monstres = new ArrayList<>();
-        monstres.add(new Monstre(3, 3, labyrinthe));
-        monstres.add(new Monstre(5, 5, labyrinthe));
+
+        labyrinthe.ajouterLab(new Monstre(3, 4, labyrinthe), 3, 4, this);
+        labyrinthe.ajouterLab(new Monstre(5, 6, labyrinthe), 5, 6, this);
     }
 
     /**
@@ -57,5 +58,9 @@ public class JeuZeldiablo implements Jeu {
 
     public List<Monstre> getMonstres() {
         return monstres;
+    }
+
+    public Labyrinthe getLabyrinthe() {
+        return labyrinthe;
     }
 }

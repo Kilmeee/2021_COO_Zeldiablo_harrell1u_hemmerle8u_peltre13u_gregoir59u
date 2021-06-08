@@ -1,5 +1,7 @@
 package fr;
 
+import fr.moteurJeu.Jeu;
+
 public class Labyrinthe {
 
     public static int TAILLE_CASE = 50;
@@ -35,7 +37,7 @@ public class Labyrinthe {
     }
 
     public boolean isCaseVide(int x, int y){
-        return (carte[x][y] instanceof Traversable);
+        return (carte[y][x] instanceof Traversable);
     }
 
 
@@ -47,8 +49,10 @@ public class Labyrinthe {
         return tailleY;
     }
 
-    public void ajouterLab(Placeable placeable, int x, int y) {
-        if(this.carte[x][y] instanceof CaseVide) this.carte[x][y] = placeable;
+    public void ajouterLab(Placeable placeable, int x, int y, JeuZeldiablo jeu) {
+        if(this.carte[y][x] instanceof CaseVide)
+            this.carte[y][x] = placeable;
+        if(placeable instanceof Monstre) jeu.getMonstres().add((Monstre) placeable);
     }
 
     public Placeable[][] getCarte(){
