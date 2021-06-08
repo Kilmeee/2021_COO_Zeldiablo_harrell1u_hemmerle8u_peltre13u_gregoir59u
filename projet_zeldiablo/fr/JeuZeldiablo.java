@@ -63,18 +63,18 @@ public class JeuZeldiablo implements Jeu {
 
     private void initialiserCarte() {
         this.carte = new Placeable[][]{
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {}
+                {  },
+                {  },
+                {  },
+                {  },
+                {  },
+                {  },
+                {  },
+                {  },
+                {  },
+                {  },
+                {  },
+                {  }
         };
     }
 }
