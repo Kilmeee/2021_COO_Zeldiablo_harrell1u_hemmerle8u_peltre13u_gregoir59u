@@ -52,6 +52,7 @@ public abstract class Entite extends Placeable {
 
     public void diminuerPv(int degats){
         this.pv -= degats;
+        System.out.println(pv);
     }
 
     public boolean ajouterLab(Labyrinthe lab) {
