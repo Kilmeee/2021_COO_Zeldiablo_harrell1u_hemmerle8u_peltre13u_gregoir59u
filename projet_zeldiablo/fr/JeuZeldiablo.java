@@ -2,6 +2,8 @@ package fr;
 
 import fr.moteurJeu.Commande;
 import fr.moteurJeu.Jeu;
+import fr.placeable.entites.Monstre;
+import fr.placeable.entites.Personnage;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +20,7 @@ public class JeuZeldiablo implements Jeu {
     private Labyrinthe labyrinthe;
 
     /**
-     * Attribut privé fr.Personnage qui permet de gérer le personnage en jeu.
+     * Attribut privé fr.placeable.entites.Personnage qui permet de gérer le personnage en jeu.
      */
     private Personnage personnage;
 

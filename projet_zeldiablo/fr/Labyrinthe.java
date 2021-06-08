@@ -1,6 +1,11 @@
 package fr;
 
-import fr.moteurJeu.Jeu;
+import fr.placeable.*;
+import fr.placeable.cases.CaseVide;
+import fr.placeable.cases.Mur;
+import fr.placeable.cases.Piege;
+import fr.placeable.cases.Trigger;
+import fr.placeable.entites.Monstre;
 
 public class Labyrinthe {
 

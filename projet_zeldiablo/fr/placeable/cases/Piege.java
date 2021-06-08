@@ -1,4 +1,4 @@
-package fr;
+package fr.placeable.cases;
 
 public class Piege extends Case implements Traversable{
     public Piege(){

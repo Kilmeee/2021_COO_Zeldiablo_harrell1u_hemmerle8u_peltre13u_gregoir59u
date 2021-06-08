@@ -1,10 +1,10 @@
-diagramme séquence: deplacer(Commande) -> fr.Entite
+diagramme séquence: deplacer(Commande) -> fr.placeable.entites.Entite
 @startuml
-title Méthode deplacer de fr.Entite
+title Méthode deplacer de fr.placeable.entites.Entite
 participant "moteurGraphique:MoteurGraphique" as mot
 participant "jeuZeldiablo:fr.JeuZeldiablo" as jeu
 
-participant "e:fr.Entite" as entite
+participant "e:fr.placeable.entites.Entite" as entite
 
 [-> mot : lancerJeu(int, int)
 activate mot

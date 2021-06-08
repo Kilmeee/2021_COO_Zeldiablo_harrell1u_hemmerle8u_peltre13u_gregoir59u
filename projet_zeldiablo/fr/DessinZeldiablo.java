@@ -1,6 +1,7 @@
 package fr;
 
 import fr.moteurJeu.DessinJeu;
+import fr.placeable.cases.Mur;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;

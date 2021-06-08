@@ -1,8 +1,8 @@
 package fr.test;
 
 import fr.Labyrinthe;
-import fr.Monstre;
-import fr.Personnage;
+import fr.placeable.entites.Monstre;
+import fr.placeable.entites.Personnage;
 import fr.moteurJeu.Commande;
 import org.junit.Test;
 

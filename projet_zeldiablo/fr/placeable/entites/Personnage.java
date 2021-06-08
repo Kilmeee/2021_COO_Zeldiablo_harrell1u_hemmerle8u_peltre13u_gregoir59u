@@ -1,6 +1,6 @@
-package fr;
+package fr.placeable.entites;
 
-import fr.moteurJeu.Commande;
+import fr.Labyrinthe;
 
 import java.awt.*;
 

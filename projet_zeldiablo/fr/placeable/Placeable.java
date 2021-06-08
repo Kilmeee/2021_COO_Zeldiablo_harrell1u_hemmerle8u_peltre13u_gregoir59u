@@ -1,5 +1,4 @@
-package fr;
+package fr.placeable;
 
 public interface Placeable {
-
 }

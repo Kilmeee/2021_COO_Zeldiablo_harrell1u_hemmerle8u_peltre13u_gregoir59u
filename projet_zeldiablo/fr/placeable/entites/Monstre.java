@@ -1,4 +1,6 @@
-package fr;
+package fr.placeable.entites;
+
+import fr.Labyrinthe;
 
 import java.awt.*;
 
