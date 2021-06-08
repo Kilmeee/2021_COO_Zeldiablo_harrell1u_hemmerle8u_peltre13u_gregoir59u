@@ -1,7 +1,8 @@
 package fr;
 
 public class CaseVide extends Case {
-    public CaseVide() {
-
+    @Override
+    public String getType() {
+        return "v";
     }
 }

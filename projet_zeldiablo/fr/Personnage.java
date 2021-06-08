@@ -2,6 +2,8 @@ package fr;
 
 import fr.moteurJeu.Commande;
 
+import java.awt.*;
+
 public class Personnage extends Entite {
 
     /**
@@ -11,6 +13,12 @@ public class Personnage extends Entite {
      */
     public Personnage(int x, int y, Labyrinthe lab) {
         super(x, y, lab);
+        this.pv = 20;
+    }
+
+    @Override
+    public Color getColor() {
+        return null;
     }
 
     /**
@@ -19,7 +27,12 @@ public class Personnage extends Entite {
      */
     public Personnage(Labyrinthe lab){
         super(lab);
+        this.pv = 20;
     }
 
 
+    @Override
+    public String getType() {
+        return "p";
+    }
 }

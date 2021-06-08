@@ -28,8 +28,10 @@ public class Labyrinthe {
                 {cv,cv,cv,cv,mur,cv,cv,cv,mur,cv,cv,cv,cv,mur,cv,mur,mur,mur,cv,mur},
                 {cv,mur,cv,cv,cv,cv,cv,cv,mur,cv,cv,cv,mur,mur,cv,mur,cv,cv,cv,mur},
                 {cv,mur,cv,cv,mur,cv,mur,mur,mur,mur,cv,cv,mur,mur,mur,mur,cv,mur,cv,mur},
-                {cv,cv,cv,cv,mur,cv,cv,cv,cv,mur,cv,cv,cv,cv,cv,cv,cv,mur,cv,cv},
+                {cv,cv,cv,cv,mur,cv,cv,cv,cv,mur,cv,cv,cv,cv,cv,cv,cv,mur,cv,cv}
         };
+
+        System.out.println(carte[0][5]);
     }
 
     public int getTailleX() {

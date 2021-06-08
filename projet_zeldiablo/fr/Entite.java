@@ -2,11 +2,15 @@ package fr;
 
 import fr.moteurJeu.Commande;
 
+import java.awt.*;
+
 public abstract class Entite implements Placeable {
 
     private Labyrinthe lab;
 
     protected int x, y;
+
+    protected int pv;
 
     public Entite(Labyrinthe lab) {
         this.x = 0;
@@ -43,4 +47,6 @@ public abstract class Entite implements Placeable {
     public int getY() {
         return y;
     }
+
+    public abstract Color getColor();
 }
