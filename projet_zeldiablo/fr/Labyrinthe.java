@@ -18,6 +18,8 @@ public class Labyrinthe {
 
         CaseVide cv = new CaseVide();
         Mur mur = new Mur();
+        Piege pg = new Piege();
+        Trigger tg = new Trigger();
         this.carte = new Placeable[][]{
                 {cv,cv,cv,cv,cv,cv,cv,cv,cv,mur,cv,cv,cv,cv,mur,cv,cv,mur,cv,cv},
                 {cv,mur,mur,mur,mur,mur,mur,mur,cv,mur,cv,mur,mur,mur,mur,cv,cv,cv,cv,cv},
@@ -28,9 +30,9 @@ public class Labyrinthe {
                 {cv,cv,cv,cv,cv,cv,cv,cv,cv,mur,mur,mur,cv,mur,mur,mur,cv,cv,cv,mur},
                 {mur,cv,mur,mur,mur,mur,mur,cv,mur,mur,mur,mur,cv,mur,cv,cv,cv,mur,cv,mur},
                 {cv,cv,cv,cv,mur,cv,cv,cv,mur,cv,cv,cv,cv,mur,cv,mur,mur,mur,cv,mur},
-                {cv,mur,cv,cv,cv,cv,cv,cv,mur,cv,cv,cv,mur,mur,cv,mur,cv,cv,cv,mur},
+                {cv,mur,cv,cv,tg,cv,cv,cv,mur,cv,cv,cv,mur,mur,cv,mur,cv,cv,cv,mur},
                 {cv,mur,cv,cv,mur,cv,mur,mur,mur,mur,cv,cv,mur,mur,mur,mur,cv,mur,cv,mur},
-                {cv,cv,cv,cv,mur,cv,cv,cv,cv,mur,cv,cv,cv,cv,cv,cv,cv,mur,cv,cv}
+                {cv,cv,cv,cv,mur,cv,cv,cv,cv,mur,cv,cv,pg,cv,cv,cv,cv,mur,cv,cv}
         };
 
         System.out.println(carte[0][5]);
@@ -38,6 +40,14 @@ public class Labyrinthe {
 
     public boolean isCaseVide(int x, int y){
         return (carte[y][x] instanceof Traversable);
+    }
+
+    public boolean isPiege(int x, int y){
+        return (carte[y][x] instanceof Piege);
+    }
+
+    public boolean isTriggerCase(int x, int y){
+        return (carte[y][x] instanceof Trigger);
     }
 
 
