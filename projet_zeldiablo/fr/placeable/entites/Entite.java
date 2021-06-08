@@ -39,7 +39,7 @@ public abstract class Entite extends Placeable {
         } else {
             return;
         }
-        lab.getCarte()[y][x].declencher();
+        lab.getCarte()[y][x].declencher(this);
     }
 
     public int getX() {
@@ -48,6 +48,10 @@ public abstract class Entite extends Placeable {
 
     public int getY() {
         return y;
+    }
+
+    public void diminuerPv(int degats){
+        this.pv -= degats;
     }
 
     public boolean ajouterLab(Labyrinthe lab) {
