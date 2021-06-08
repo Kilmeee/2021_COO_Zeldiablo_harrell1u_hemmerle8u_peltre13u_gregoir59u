@@ -2,6 +2,8 @@ package fr;
 
 import fr.moteurJeu.Commande;
 import fr.moteurJeu.Jeu;
+import fr.placeable.Placeable;
+import fr.placeable.Traversable;
 import fr.placeable.entites.Monstre;
 import fr.placeable.entites.Personnage;
 
@@ -31,11 +33,18 @@ public class JeuZeldiablo implements Jeu {
      */
     public JeuZeldiablo() {
         this.labyrinthe = new Labyrinthe();
-        this.personnage = new Personnage(labyrinthe);
+        this.personnage = new Personnage();
         monstres = new ArrayList<>();
+        Placeable.setup(this, labyrinthe);
 
-        labyrinthe.ajouterLab(new Monstre(3, 4, labyrinthe), 3, 4, this);
-        labyrinthe.ajouterLab(new Monstre(5, 6, labyrinthe), 5, 6, this);
+
+
+        Monstre m1 = new Monstre(3, 4);
+        Monstre m2 = new Monstre(5, 6);
+
+        personnage.ajouterLab(labyrinthe);
+        m1.ajouterLab(labyrinthe);
+        m2.ajouterLab(labyrinthe);
     }
 
     /**
@@ -52,10 +61,6 @@ public class JeuZeldiablo implements Jeu {
     @Override
     public boolean etreFini() {
         return false;
-    }
-
-    public Personnage getPersonnage() {
-        return personnage;
     }
 
     public List<Monstre> getMonstres() {

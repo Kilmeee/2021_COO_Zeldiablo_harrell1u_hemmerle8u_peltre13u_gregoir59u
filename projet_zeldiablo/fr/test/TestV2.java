@@ -1,5 +1,6 @@
 package fr.test;
 
+import fr.JeuZeldiablo;
 import fr.Labyrinthe;
 import fr.placeable.entites.Monstre;
 import fr.placeable.entites.Personnage;
@@ -9,6 +10,8 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class TestV2 {
+
+    private JeuZeldiablo jeu = new JeuZeldiablo();
 
     @Test
     public void test_constructeur_Labyrinthe() {
@@ -20,8 +23,10 @@ public class TestV2 {
     @Test
     public void test_constructeur_Entite() {
         Labyrinthe lab = new Labyrinthe();
-        Personnage personnage = new Personnage(10,11, lab);
-        Monstre monstre = new Monstre(20,21,lab);
+        Personnage personnage = new Personnage(10,11);
+        Monstre monstre = new Monstre(20,2);
+        personnage.ajouterLab(lab);
+        monstre.ajouterLab(lab);
         assertEquals("position x differente pour personnage.",10, personnage.getX());
         assertEquals("position y differente pour personnage.",11, personnage.getY());
         assertEquals("position x differente pour monstre.",20, monstre.getX());
@@ -31,7 +36,8 @@ public class TestV2 {
     @Test
     public void test_constructeur_seDeplacer() {
         Labyrinthe lab = new Labyrinthe();
-        Personnage personnage = new Personnage(10,10,lab);
+        Personnage personnage = new Personnage(10,10);
+        personnage.ajouterLab(lab);
         Commande commande = new Commande();
         commande.droite = true;
         personnage.deplacer(commande);
@@ -42,8 +48,10 @@ public class TestV2 {
 
     @Test public void test_methode_isCaseVide() {
         Labyrinthe lab = new Labyrinthe();
-        Personnage personnageQuiBloque = new Personnage(10,10,lab);
-        Personnage personnageQuiBouge = new Personnage(10,11,lab);
+        Personnage personnageQuiBloque = new Personnage(10,10);
+        Personnage personnageQuiBouge = new Personnage(10,11);
+        personnageQuiBouge.ajouterLab(lab);
+        personnageQuiBloque.ajouterLab(lab);
         Commande commande = new Commande();
         commande.haut = true;
         personnageQuiBouge.deplacer(commande);

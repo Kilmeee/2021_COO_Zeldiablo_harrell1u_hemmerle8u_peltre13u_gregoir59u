@@ -16,7 +16,6 @@ import java.awt.image.BufferedImage;
 public class DessinZeldiablo implements DessinJeu {
 
     private JeuZeldiablo jeuZeldiablo;
-    private Color brun = new Color(222,184,135);
 
     public DessinZeldiablo(JeuZeldiablo jeuZeldiablo) {
         this.jeuZeldiablo = jeuZeldiablo;
@@ -30,29 +29,8 @@ public class DessinZeldiablo implements DessinJeu {
         g.setColor(Color.BLACK);
         for (int i = 0; i < jeuZeldiablo.getLabyrinthe().getTailleY(); i++) {
             for (int i1 = 0; i1 < jeuZeldiablo.getLabyrinthe().getTailleX(); i1++) {
-                if(jeuZeldiablo.getLabyrinthe().getCarte()[i][i1] instanceof Mur)
-                    g.fillRect(i1*50, i*50, 50, 50);
-                else if(jeuZeldiablo.getLabyrinthe().getCarte()[i][i1] instanceof Piege &&
-                        ((Declanchable)(jeuZeldiablo.getLabyrinthe().getCarte()[i][i1])).isTrouver()){
-                    g.setColor(brun);
-                    g.fillRect(i1*50, i*50, 50, 50);
-                    g.setColor(Color.BLACK);
-                }else if(jeuZeldiablo.getLabyrinthe().getCarte()[i][i1] instanceof Trigger &&
-                        ((Declanchable)(jeuZeldiablo.getLabyrinthe().getCarte()[i][i1])).isTrouver()){
-                    g.setColor(Color.GRAY);
-                    g.fillRect(i1*50, i*50, 50, 50);
-                    g.setColor(Color.BLACK);
-                }
+                jeuZeldiablo.getLabyrinthe().getCarte()[i][i1].dessiner(g, i, i1);
             }
         }
-        //Création du héro
-        g.setColor(Color.BLUE);
-        g.fillOval(jeuZeldiablo.getPersonnage().getX() * Labyrinthe.TAILLE_CASE, jeuZeldiablo.getPersonnage().getY() * Labyrinthe.TAILLE_CASE
-                , Labyrinthe.TAILLE_CASE, Labyrinthe.TAILLE_CASE);
-
-        //Création des monstre
-        g.setColor(Color.RED);
-        jeuZeldiablo.getMonstres().forEach(monstre -> g.fillOval(monstre.getX() * Labyrinthe.TAILLE_CASE, monstre.getY() * Labyrinthe.TAILLE_CASE
-                , Labyrinthe.TAILLE_CASE, Labyrinthe.TAILLE_CASE));
     }
 }

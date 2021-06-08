@@ -11,22 +11,23 @@ public class Personnage extends Entite {
      * @param x
      * @param y
      */
-    public Personnage(int x, int y, Labyrinthe lab) {
-        super(x, y, lab);
+    public Personnage(int x, int y) {
+        super(x, y);
         this.pv = 20;
-    }
-
-    @Override
-    public Color getColor() {
-        return null;
     }
 
     /**
      * Concstructeur qui définit la postion initiale par défaut au milieu du labyrinthe.
-     * @param lab
      */
-    public Personnage(Labyrinthe lab){
-        super(lab);
+    public Personnage(){
+        super();
         this.pv = 20;
+    }
+
+    @Override
+    public void dessiner(Graphics2D g, int i, int i1) {
+        g.setColor(Color.BLUE);
+        g.fillOval(x * Labyrinthe.TAILLE_CASE, y * Labyrinthe.TAILLE_CASE
+                , Labyrinthe.TAILLE_CASE, Labyrinthe.TAILLE_CASE);
     }
 }

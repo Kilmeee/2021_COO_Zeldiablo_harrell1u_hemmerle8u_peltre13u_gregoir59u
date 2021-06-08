@@ -3,10 +3,9 @@ package fr.placeable.entites;
 import fr.Labyrinthe;
 import fr.moteurJeu.Commande;
 import fr.placeable.Placeable;
+import fr.placeable.cases.CaseVide;
 
-import java.awt.*;
-
-public abstract class Entite implements Placeable {
+public abstract class Entite extends Placeable {
 
     private Labyrinthe lab;
 
@@ -14,16 +13,14 @@ public abstract class Entite implements Placeable {
 
     protected int pv;
 
-    public Entite(Labyrinthe lab) {
+    public Entite() {
         this.x = 0;
         this.y = 0;
-        this.lab = lab;
     }
 
-    public Entite(int x, int y, Labyrinthe lab) {
+    public Entite(int x, int y) {
         this.x = x;
         this.y = y;
-        this.lab = lab;
     }
 
     /**
@@ -31,18 +28,27 @@ public abstract class Entite implements Placeable {
      * @param direction
      */
     public void deplacer(Commande direction){
-        if (direction.haut && y > 0 && lab.isCaseVide(x,y-1)){
+        System.out.println(lab.getCarte()[y][x]);
+        if (direction.haut && y > 0 && lab.getCarte()[y-1][x].isCaseVide()){
+            lab.getCarte()[y][x] = new CaseVide();
             this.y--;
-            lab.isDeclenchable(x,y);
-        } else if (direction.bas && y < lab.getTailleY()-1 && lab.isCaseVide(x,y+1)){
+            lab.getCarte()[y][x] = this;
+            lab.getCarte()[y][x].declencher();
+        } else if (direction.bas && y < lab.getTailleY()-1 && lab.getCarte()[y+1][x].isCaseVide()){
+            lab.getCarte()[y][x] = new CaseVide();
             this.y++;
-            lab.isDeclenchable(x,y);
-        } else if (direction.gauche && x >0 && lab.isCaseVide(x-1,y)){
+            lab.getCarte()[y][x] = this;
+            lab.getCarte()[y][x].declencher();
+        } else if (direction.gauche && x >0 && lab.getCarte()[y][x-1].isCaseVide()){
+            lab.getCarte()[y][x] = new CaseVide();
             this.x--;
-            lab.isDeclenchable(x,y);
-        } else if (direction.droite && x < lab.getTailleX()-1 && lab.isCaseVide(x+1,y)){
+            lab.getCarte()[y][x] = this;
+            lab.getCarte()[y][x].declencher();
+        } else if (direction.droite && x < lab.getTailleX()-1 && lab.getCarte()[y][x+1].isCaseVide()){
+            lab.getCarte()[y][x] = new CaseVide();
             this.x++;
-            lab.isDeclenchable(x,y);
+            lab.getCarte()[y][x] = this;
+            lab.getCarte()[y][x].declencher();
         }
     }
 
@@ -54,5 +60,14 @@ public abstract class Entite implements Placeable {
         return y;
     }
 
-    public abstract Color getColor();
+    @Override
+    public boolean ajouterLab(Labyrinthe lab) {
+        boolean res = false;
+        if(lab.getCarte()[y][x].isCaseVide()) {
+            this.lab = lab;
+            lab.getCarte()[y][x] = this;
+            res = true;
+        }
+        return res;
+    }
 }

@@ -39,22 +39,7 @@ public class Labyrinthe {
                 {cv,mur,cv,cv,mur,cv,mur,mur,mur,mur,cv,cv,mur,mur,mur,mur,cv,mur,cv,mur},
                 {cv,cv,cv,cv,mur,cv,cv,cv,cv,mur,cv,cv,pg,cv,cv,cv,cv,mur,cv,cv}
         };
-
-        System.out.println(carte[0][5]);
     }
-
-    public boolean isCaseVide(int x, int y){
-        return (carte[y][x] instanceof Traversable);
-    }
-
-    public void isDeclenchable(int x, int y){
-        if (carte[y][x] instanceof Declanchable){
-            Declanchable dec = (Declanchable) carte[y][x];
-            dec.declencher();
-        }
-    }
-
-
 
     public int getTailleX() {
         return tailleX;
@@ -62,12 +47,6 @@ public class Labyrinthe {
 
     public int getTailleY() {
         return tailleY;
-    }
-
-    public void ajouterLab(Placeable placeable, int x, int y, JeuZeldiablo jeu) {
-        if(this.carte[y][x] instanceof CaseVide)
-            this.carte[y][x] = placeable;
-        if(placeable instanceof Monstre) jeu.getMonstres().add((Monstre) placeable);
     }
 
     public Placeable[][] getCarte(){

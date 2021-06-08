@@ -1,4 +1,11 @@
 package fr.placeable;
 
-public interface Traversable {
+import fr.placeable.cases.Case;
+
+public abstract class Traversable extends Case {
+
+    public boolean isCaseVide() {
+        return true;
+    }
+
 }
