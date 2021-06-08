@@ -107,7 +107,7 @@ class Monstre {
 Entite <|-- Monstre
 Entite <|-- Personnage
 Case <|-- Mur
-Plaecable <|-- Case
+Placeable <|-- Case
 Traversable <|-- CaseVide
 Declanchable <|-- Piege
 Declanchable <|-- Trigger

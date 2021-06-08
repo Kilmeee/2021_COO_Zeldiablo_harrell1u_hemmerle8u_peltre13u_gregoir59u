@@ -11,11 +11,13 @@ public abstract class Entite extends Placeable {
 
     protected int x, y, pv;
     protected boolean dead;
+    protected int degats;
 
     public Entite() {
         this.x = 0;
         this.y = 0;
         this.dead = false;
+        this.degats = 2;
     }
 
     public Entite(int x, int y) {
@@ -81,5 +83,15 @@ public abstract class Entite extends Placeable {
             res = true;
         }
         return res;
+    }
+
+    public void attaquer(Commande c){
+        jeu.getMonstres().forEach(monstre -> {
+            if (c.attaquer && ((monstre.getX() == x+1 || monstre.getX() == x-1) && monstre.getY() == y)
+                    || ((monstre.getY() == y+1 || monstre.getY() == y-1) && monstre.getX() == x)){
+                monstre.diminuerPv(this.degats);
+            }
+        });
+        c.attaquer=false;
     }
 }
