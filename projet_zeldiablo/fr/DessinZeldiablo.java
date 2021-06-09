@@ -52,6 +52,12 @@ public class DessinZeldiablo implements DessinJeu {
         for(int i = 0; i < jeuZeldiablo.getMonstres().size(); i++){
             textPv.append("   Monstre ").append((i+1)).append(" : ").append(jeuZeldiablo.getMonstres().get(i).getPv());
         }
-        g.drawString(textPv.toString(), 5, 615);
+        if (jeuZeldiablo.getPersonnage().isDead()) {
+            g.setColor(Color.red);
+            textPv.append("     VOUS ETES MORT !");
+            g.drawString(textPv.toString(), 5, 615);
+        }else {
+            g.drawString(textPv.toString(), 5, 615);
+        }
     }
 }
