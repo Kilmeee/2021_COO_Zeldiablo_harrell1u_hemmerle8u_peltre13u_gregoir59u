@@ -1,0 +1,18 @@
+@startuml
+title Degat piege
+
+participant "main" as m
+participant "piege:Piege" as p
+participant "entite:Entite" as en
+
+m -> p : seDeclencher(e)
+activate p
+p -> en : diminuerPv(5)
+activate en
+p <-- en
+deactivate en
+m <-- p
+deactivate p
+
+
+@enduml
