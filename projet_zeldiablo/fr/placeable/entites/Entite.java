@@ -32,7 +32,6 @@ public abstract class Entite extends Placeable {
      */
     public void deplacer(Commande direction){
         if(dead) {
-            System.out.println("Vous ne pouvez pas vous déplacer car vous êtes mort.");
             return;
         }
 
