@@ -1,0 +1,32 @@
+@startuml
+title Diagramme attaquer()
+
+participant "mot:MoteurGraphique" as mot
+participant "j:JeuZeldiablo" as j
+participant "e:Entite" as e
+participant "m:Monstre" as m
+
+[-> mot : lancerJeu(int, int)
+activate mot
+
+mot -> j : evoluer(Commande)
+activate j
+
+j -> e : attaquer(commande)
+activate e
+
+e -> m : diminuerPv(degats)
+activate m
+
+e <-- m
+deactivate m
+
+j <-- e
+deactivate e
+
+mot <-- j
+deactivate j
+
+[<-- mot
+deactivate mot
+@enduml
