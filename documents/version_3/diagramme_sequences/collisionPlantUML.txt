@@ -7,8 +7,8 @@ j -> e : deplacer(Commande)
 activate e
 e -> l : isCaseVide(int, int)
 activate l
-e <- l : boolean
+e <-- l : boolean
 deactivate l
-j <- e
+j <-- e
 deactivate e
 @enduml

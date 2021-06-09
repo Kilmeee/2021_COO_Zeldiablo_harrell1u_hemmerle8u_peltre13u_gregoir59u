@@ -7,8 +7,8 @@ j -> e : attaquer(Commande)
 activate e
 e -> m : diminuerPv(int)
 activate m
-e <- m :
+e <-- m :
 deactivate m
-j <- e
+j <-- e
 deactivate e
 @enduml
