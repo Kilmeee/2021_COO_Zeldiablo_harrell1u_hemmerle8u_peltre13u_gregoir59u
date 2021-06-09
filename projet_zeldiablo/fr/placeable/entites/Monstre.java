@@ -1,8 +1,10 @@
 package fr.placeable.entites;
 
+import fr.JeuZeldiablo;
 import fr.Labyrinthe;
 
 import java.awt.*;
+import java.util.Timer;
 
 public class Monstre extends Entite {
 
@@ -31,11 +33,7 @@ public class Monstre extends Entite {
 
     @Override
     public void dessiner(Graphics2D g, int i, int i1) {
-        if(this.isDead()) {
-            g.setColor(Color.darkGray);
-        }else{
-            g.setColor(Color.RED);
-        }
+        g.setColor(Color.RED);
         g.fillOval(x * Labyrinthe.TAILLE_CASE, y * Labyrinthe.TAILLE_CASE
                 , Labyrinthe.TAILLE_CASE, Labyrinthe.TAILLE_CASE);
     }

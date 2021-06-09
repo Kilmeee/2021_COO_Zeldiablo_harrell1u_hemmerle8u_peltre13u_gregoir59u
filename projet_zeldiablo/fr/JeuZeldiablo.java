@@ -57,7 +57,11 @@ public class JeuZeldiablo implements Jeu {
     public void evoluer(Commande commandeUser) {
         personnage.deplacer(commandeUser);
         personnage.attaquer(commandeUser);
+        for(int i = 0; i < monstres.size(); i++){
+            if(monstres.get(i).isDead()) monstres.remove((monstres.get(i)));
+        }
     }
+
 
     @Override
     public boolean etreFini() {
