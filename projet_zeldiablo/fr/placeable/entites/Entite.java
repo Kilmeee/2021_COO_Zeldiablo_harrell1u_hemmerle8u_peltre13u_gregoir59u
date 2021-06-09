@@ -1,9 +1,10 @@
 package fr.placeable.entites;
 
 import fr.Labyrinthe;
+import fr.iamonstre.Deplacement;
+import fr.iamonstre.Position;
 import fr.moteurJeu.Commande;
 import fr.placeable.Placeable;
-import fr.placeable.cases.CaseVide;
 
 public abstract class Entite extends Placeable {
 
@@ -34,7 +35,6 @@ public abstract class Entite extends Placeable {
         if(dead) {
             return;
         }
-
         if (direction.haut && y > 0 && lab.getCarte()[y-1][x].isCaseVide(x, y-1)){
             this.y--;
         } else if (direction.bas && y < lab.getTailleY()-1 && lab.getCarte()[y+1][x].isCaseVide(x, y+1)){
@@ -46,6 +46,24 @@ public abstract class Entite extends Placeable {
         } else {
             return;
         }
+        lab.getCarte()[y][x].declencher(this);
+    }
+
+    public void deplacer() {
+        Position position = Deplacement.deplacementAleatoire(this);
+        int posX = position.getX();
+        int posY = position.getY();
+        int i = 0;
+        while(posX >= lab.getTailleX() || posX < 0 || posY >= lab.getTailleY() || posY < 0 || !lab.getCarte()[posY][posX].isCaseVide(posX, posY)
+                || (posX == jeu.getPersonnage().getX() && posY == jeu.getPersonnage().getY())) {
+            position = Deplacement.deplacementAleatoire(this);
+            posX = position.getX();
+            posY = position.getY();
+            if(i > 4) return;
+            i++;
+        }
+        this.x = posX;
+        this.y = posY;
         lab.getCarte()[y][x].declencher(this);
     }
 

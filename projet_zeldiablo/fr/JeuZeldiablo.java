@@ -4,6 +4,7 @@ import fr.moteurJeu.Commande;
 import fr.moteurJeu.Jeu;
 import fr.placeable.Placeable;
 import fr.placeable.Traversable;
+import fr.placeable.entites.Entite;
 import fr.placeable.entites.Monstre;
 import fr.placeable.entites.Personnage;
 
@@ -28,6 +29,8 @@ public class JeuZeldiablo implements Jeu {
 
     private List<Monstre> monstres;
 
+    private int timer;
+
     /**
      * Constructeur de base qui initialise le Jeu.
      */
@@ -37,7 +40,7 @@ public class JeuZeldiablo implements Jeu {
         monstres = new ArrayList<>();
         Placeable.setup(this, labyrinthe);
 
-
+        timer = 0;
 
         Monstre m1 = new Monstre(3, 4);
         Monstre m2 = new Monstre(5, 6);
@@ -59,6 +62,12 @@ public class JeuZeldiablo implements Jeu {
         personnage.attaquer(commandeUser);
         for(int i = 0; i < monstres.size(); i++){
             if(monstres.get(i).isDead()) monstres.remove((monstres.get(i)));
+        }
+
+        if(timer < 3) timer++;
+        else {
+            timer = 0;
+            monstres.forEach(Entite::deplacer);
         }
     }
 
