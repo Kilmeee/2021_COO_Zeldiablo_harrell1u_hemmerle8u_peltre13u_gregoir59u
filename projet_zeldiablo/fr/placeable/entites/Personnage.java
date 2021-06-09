@@ -2,7 +2,11 @@ package fr.placeable.entites;
 
 import fr.Labyrinthe;
 
+import javax.imageio.ImageIO;
 import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 
 public class Personnage extends Entite {
 
@@ -31,10 +35,12 @@ public class Personnage extends Entite {
         if(this.isDead()) {
             g.setColor(Color.darkGray);
         }else{
-            g.setColor(Color.BLUE);
+            try{
+                BufferedImage image = ImageIO.read(new File("sprite/perso.png"));
+                g.drawImage(image, x*Labyrinthe.TAILLE_CASE, y*Labyrinthe.TAILLE_CASE,null);
+            } catch (IOException e){
+                e.printStackTrace();
+            }
         }
-        g.fillOval(x * Labyrinthe.TAILLE_CASE, y * Labyrinthe.TAILLE_CASE
-                , Labyrinthe.TAILLE_CASE, Labyrinthe.TAILLE_CASE);
     }
-
 }
