@@ -16,6 +16,9 @@ import java.io.IOException;
  */
 public class Fantome extends Monstre {
 
+    /**
+     *
+     */
     public Fantome() {
         super();
         this.pv = 10;
@@ -23,6 +26,11 @@ public class Fantome extends Monstre {
         this.timer = 3;
     }
 
+    /**
+     *
+     * @param x
+     * @param y
+     */
     public Fantome(int x, int y) {
         super(x, y);
         this.pv = 10;
@@ -30,6 +38,12 @@ public class Fantome extends Monstre {
         this.timer = 3;
     }
 
+    /**
+     *
+     * @param g
+     * @param i
+     * @param i1
+     */
     @Override
     public void dessiner(Graphics2D g, int i, int i1) {
         try{
@@ -40,6 +54,9 @@ public class Fantome extends Monstre {
         }
     }
 
+    /**
+     *
+     */
     @Override
     public void deplacer() {
         Position position = DeplacementUtil.deplacementAleatoire(this);

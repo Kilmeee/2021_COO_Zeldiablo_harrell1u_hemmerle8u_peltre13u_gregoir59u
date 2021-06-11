@@ -16,11 +16,21 @@ import java.io.IOException;
  */
 public class Potion extends Declanchable {
 
+    /**
+     *
+     * @param e
+     */
     @Override
     public void declencher(Entite e) {
         if(!isTrouver()) if(e.prendrePotion()) trouver = true;
     }
 
+    /**
+     *
+     * @param g
+     * @param i
+     * @param i1
+     */
     @Override
     public void dessiner(Graphics2D g, int i, int i1) {
         if (isTrouver()) {

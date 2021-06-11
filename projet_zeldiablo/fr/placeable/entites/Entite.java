@@ -18,6 +18,9 @@ public abstract class Entite extends Placeable {
     protected boolean dead;
     protected int degats;
 
+    /**
+     *
+     */
     public Entite() {
         this.x = 0;
         this.y = 0;
@@ -25,6 +28,11 @@ public abstract class Entite extends Placeable {
         this.degats = 2;
     }
 
+    /**
+     *
+     * @param x
+     * @param y
+     */
     public Entite(int x, int y) {
         this.x = x;
         this.y = y;
@@ -54,6 +62,9 @@ public abstract class Entite extends Placeable {
         lab.getCarte()[y][x].declencher(this);
     }
 
+    /**
+     *
+     */
     public void deplacer() {
         Position position = DeplacementUtil.deplacementAleatoire(this);
         int posX = position.getX();
@@ -73,26 +84,50 @@ public abstract class Entite extends Placeable {
 
     }
 
+    /**
+     *
+     * @return
+     */
     public int getX() {
         return x;
     }
 
+    /**
+     *
+     * @return
+     */
     public int getY() {
         return y;
     }
 
+    /**
+     *
+     * @return
+     */
     public int getPv(){
         return this.pv;
     }
 
+    /**
+     *
+     * @return
+     */
     public int getDegats() {
         return this.degats;
     }
 
+    /**
+     *
+     * @return
+     */
     public boolean isDead() {
         return this.dead;
     }
 
+    /**
+     *
+     * @param degats
+     */
     public void diminuerPv(int degats){
         if(degats >= 0) {
             if(this.pv - degats <= 0) {
@@ -104,6 +139,10 @@ public abstract class Entite extends Placeable {
         }
     }
 
+    /**
+     *
+     * @param pv
+     */
     public void ajouterPv(int pv) {
         if(pv >= 0) {
             if(this.pv + pv > maxPv) {
@@ -114,6 +153,11 @@ public abstract class Entite extends Placeable {
         }
     }
 
+    /**
+     *
+     * @param lab
+     * @return
+     */
     public boolean ajouterJeu(Labyrinthe lab) {
         boolean res = false;
         if(lab.getCarte()[y][x].isCaseVide(x, y)) {
@@ -123,12 +167,23 @@ public abstract class Entite extends Placeable {
         return res;
     }
 
+    /**
+     *
+     */
     public void gagne() { }
 
+    /**
+     *
+     * @return
+     */
     public boolean prendreEpee() {
         return false;
     }
 
+    /**
+     *
+     * @return
+     */
     public boolean prendrePotion() {
         return false;
     }

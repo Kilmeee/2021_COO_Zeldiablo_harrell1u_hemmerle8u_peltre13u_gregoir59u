@@ -14,6 +14,9 @@ import java.io.IOException;
  */
 public class Troll extends Monstre {
 
+    /**
+     *
+     */
     public Troll() {
         super();
         this.pv = 50;
@@ -21,6 +24,11 @@ public class Troll extends Monstre {
         this.timer = 10;
     }
 
+    /**
+     *
+     * @param x
+     * @param y
+     */
     public Troll(int x, int y) {
         super(x, y);
         this.pv = 50;
@@ -28,6 +36,12 @@ public class Troll extends Monstre {
         this.timer = 10;
     }
 
+    /**
+     *
+     * @param g
+     * @param i
+     * @param i1
+     */
     @Override
     public void dessiner(Graphics2D g, int i, int i1) {
         try{

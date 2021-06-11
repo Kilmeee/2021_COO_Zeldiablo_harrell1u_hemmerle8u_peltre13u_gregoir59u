@@ -14,6 +14,9 @@ import java.io.IOException;
  */
 public class Serpent extends Monstre {
 
+    /**
+     *
+     */
     public Serpent() {
         super();
         this.pv = 20;
@@ -21,6 +24,11 @@ public class Serpent extends Monstre {
         this.timer = 4;
     }
 
+    /**
+     *
+     * @param x
+     * @param y
+     */
     public Serpent(int x, int y) {
         super(x, y);
         this.pv = 20;
@@ -28,6 +36,12 @@ public class Serpent extends Monstre {
         this.timer = 4;
     }
 
+    /**
+     *
+     * @param g
+     * @param i
+     * @param i1
+     */
     @Override
     public void dessiner(Graphics2D g, int i, int i1) {
         try{

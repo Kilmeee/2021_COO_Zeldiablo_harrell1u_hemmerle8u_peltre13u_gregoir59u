@@ -78,24 +78,43 @@ public class JeuZeldiablo implements Jeu {
         }
     }
 
-
+    /**
+     *
+     * @return
+     */
     @Override
     public boolean etreFini() {
         return fini;
     }
 
+    /**
+     *
+     * @return
+     */
     public List<Monstre> getMonstres() {
         return monstres;
     }
 
+    /**
+     *
+     * @return
+     */
     public Labyrinthe getLabyrinthe() {
         return labyrinthe;
     }
 
+    /**
+     *
+     * @return
+     */
     public Personnage getPersonnage() {
         return personnage;
     }
 
+    /**
+     *
+     * @return
+     */
     public Monstre nouveauMonstre() {
         Monstre res;
         int x = r.nextInt(20);
@@ -115,6 +134,10 @@ public class JeuZeldiablo implements Jeu {
         return res;
     }
 
+    /**
+     *
+     * @param personnage
+     */
     public void ajouterPersonnage(Personnage personnage) {
         this.personnage = personnage;
     }

@@ -24,6 +24,10 @@ public class DessinZeldiablo implements DessinJeu {
         this.jeuZeldiablo = jeuZeldiablo;
     }
 
+    /**
+     *
+     * @param image
+     */
     @Override
     public void dessiner(BufferedImage image) {
         Graphics2D g = (Graphics2D) image.getGraphics();
@@ -48,6 +52,10 @@ public class DessinZeldiablo implements DessinJeu {
         textArrive(g);
     }
 
+    /**
+     *
+     * @param g
+     */
     private void dessinerBarrePv(Graphics2D g){
         g.setColor(Color.BLACK);
         g.drawLine(0, 600, 1000,600);
@@ -67,6 +75,10 @@ public class DessinZeldiablo implements DessinJeu {
         g.drawString(textPv.toString(), 5, 615);
     }
 
+    /**
+     *
+     * @param g
+     */
     private void textMort(Graphics2D g) {
         if(jeuZeldiablo.getPersonnage().isDead()) {
             try{
@@ -78,6 +90,10 @@ public class DessinZeldiablo implements DessinJeu {
         }
     }
 
+    /**
+     *
+     * @param g
+     */
     private void textArrive(Graphics2D g) {
         if(jeuZeldiablo.getPersonnage().isArrive())  {
             try{

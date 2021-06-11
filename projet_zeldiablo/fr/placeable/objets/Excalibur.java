@@ -16,11 +16,21 @@ import java.io.IOException;
  */
 public class Excalibur extends Declanchable {
 
+    /**
+     * Permet de déclencher l'effet quand la case est trouvée.
+     * @param e
+     */
     @Override
     public void declencher(Entite e) {
         if (!isTrouver()) if(e.prendreEpee()) trouver = true;
     }
 
+    /**
+     *
+     * @param g
+     * @param i
+     * @param i1
+     */
     @Override
     public void dessiner(Graphics2D g, int i, int i1) {
         if (isTrouver()) {

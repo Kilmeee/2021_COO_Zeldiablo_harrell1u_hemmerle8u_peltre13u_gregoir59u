@@ -41,12 +41,21 @@ public class Personnage extends Entite {
         this.maxPv = 20;
     }
 
+    /**
+     *
+     * @param lab
+     * @return
+     */
     @Override
     public boolean ajouterJeu(Labyrinthe lab) {
         jeu.ajouterPersonnage(this);
         return super.ajouterJeu(lab);
     }
 
+    /**
+     *
+     * @param c
+     */
     public void attaquer(Commande c){
         jeu.getMonstres().forEach(monstre -> {
             if (c.attaquer && (((monstre.getX() == x+1 || monstre.getX() == x-1) && monstre.getY() == y)
@@ -56,6 +65,12 @@ public class Personnage extends Entite {
         });
     }
 
+    /**
+     *
+     * @param g
+     * @param i
+     * @param i1
+     */
     @Override
     public void dessiner(Graphics2D g, int i, int i1) {
         if(this.isDead()) {
@@ -69,19 +84,35 @@ public class Personnage extends Entite {
             }
         }
     }
+
+    /**
+     *
+     * @return
+     */
     public boolean isArrive() {return this.arrive; }
 
+    /**
+     *
+     */
     @Override
     public void gagne() {
         this.arrive = true;
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public boolean prendreEpee() {
         this.degats = 8;
         return true;
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public boolean prendrePotion() {
         ajouterPv(5);

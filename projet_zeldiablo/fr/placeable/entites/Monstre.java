@@ -10,10 +10,18 @@ public abstract class Monstre extends Entite {
 
     protected int timer;
 
+    /**
+     *
+     * @param x
+     * @param y
+     */
     public Monstre(int x, int y) {
         super(x, y);
     }
 
+    /**
+     *
+     */
     public Monstre() {
         super();
     }
@@ -32,6 +40,10 @@ public abstract class Monstre extends Entite {
         return res;
     }
 
+    /**
+     *
+     * @return
+     */
     public boolean attaquer() {
         boolean res = false;
         Personnage personnage = jeu.getPersonnage();
@@ -43,6 +55,10 @@ public abstract class Monstre extends Entite {
         return res;
     }
 
+    /**
+     *
+     * @param timer
+     */
     public void evoluer(int timer) {
         if(timer % this.timer == 0) if(!attaquer()) deplacer();
     }

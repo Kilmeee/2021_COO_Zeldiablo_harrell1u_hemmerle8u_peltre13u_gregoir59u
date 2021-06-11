@@ -13,10 +13,17 @@ import java.util.Random;
 
 public class Trigger extends Declanchable {
 
+    /**
+     *
+     */
     public Trigger(){
         super();
     }
 
+    /**
+     *
+     * @param e
+     */
     @Override
     public void declencher(Entite e) {
         if(!isTrouver()) trouver = true;
@@ -24,6 +31,12 @@ public class Trigger extends Declanchable {
         else e.diminuerPv(5);
     }
 
+    /**
+     *
+     * @param g
+     * @param i
+     * @param i1
+     */
     @Override
     public void dessiner(Graphics2D g, int i, int i1) {
         if(isTrouver()) {
