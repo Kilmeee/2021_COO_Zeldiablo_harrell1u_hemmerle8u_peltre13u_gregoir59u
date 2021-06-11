@@ -11,16 +11,39 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
+/**
+ * @class
+ * Classe de piège héritant de Declanchable
+ */
+
 public class Piege extends Declanchable{
+
+    /**
+     * Constructeur sans paramètre
+     */
     public Piege(){
         super();
     }
 
+    /**
+     * Méthode publique permettant de déclencher le piège tout en affectant l'Entite dessus
+     * @param e
+     *      Entite
+     */
     public void declencher(Entite e) {
         if(!isTrouver()) trouver = true;
         e.diminuerPv(5);
     }
 
+    /**
+     * Méthode de dessin qui permet de dessiner le piège selon si il est trouvé ou non
+     * @param g
+     *      Graphics2D
+     * @param i
+     *      int x
+     * @param i1
+     *      int y
+     */
     @Override
     public void dessiner(Graphics2D g, int i, int i1) {
         if(isTrouver()) {

@@ -5,6 +5,7 @@ import fr.placeable.entites.Entite;
 import java.util.Random;
 
 /**
+ * @class
  * Classe utilitaire qui permet de récupérer une position aléatoire selon la position d'une entité en y ajoutant ou retirant un x ou y
  */
 

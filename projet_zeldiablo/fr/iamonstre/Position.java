@@ -3,6 +3,7 @@ package fr.iamonstre;
 import fr.placeable.entites.Entite;
 
 /**
+ * @class
  * Classe d'une position
  */
 

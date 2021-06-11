@@ -10,6 +10,7 @@ import java.io.File;
 import java.io.IOException;
 
 /**
+ * @class
  * Classe héritant de Traversable qui est une case qui peut être traversée
  */
 

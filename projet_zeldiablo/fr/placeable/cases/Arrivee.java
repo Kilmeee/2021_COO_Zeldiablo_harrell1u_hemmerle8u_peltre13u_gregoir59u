@@ -11,6 +11,7 @@ import java.io.File;
 import java.io.IOException;
 
 /**
+ * @class
  * Classe héritant de Declanchable qui permet de créer la case d'arrivée
  */
 
