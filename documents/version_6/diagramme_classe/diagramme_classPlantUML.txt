@@ -1,0 +1,183 @@
+@startuml
+'''classes
+
+class DessinZeldiablo {
+-TAILLE:int
++DessinZeldiablo(JeuZeldiablo)
++dessiner(BufferedImage)
++dessinerBarrePv(Graphics2D)
+}
+
+class Labyrinthe{
++TAILLE_CASE : int
+-tailleX : int
+-tailleY : int
++getTailleX():int
++getTailleY():int
++getCarte():Placeable[][]
+}
+
+class Personnage{
++Personnage(int,int)
++Personnage()
++dessiner(Graphics2D, int, int)
+}
+
+abstract class Entite {
+#x :int
+#y :int
+#pv : int
++Entite()
++Entite(int,int)
++deplacer(Commande)
++deplacer()
++getX():int
++getY():int
++getPv():int
++isDead():boolean
++diminuerPv(int)
++ajouterLab(Labyrinthe):boolean
++attaquer(Commande)
++gagner()
+}
+
+class MainZeldiablo {
++main(String[])
+}
+
+class JeuZeldiablo{
++JeuZeldiablo()
++evoluer(Commande)
++etreFini():boolean
++getMonstres():List<Monstre>
++getLabyrinthe():Labyrinthe
++getPersonnage():Personnage
+}
+
+interface DessinJeu{
++dessiner(BufferedImage)
+}
+
+interface Jeu{
++evoluer(Commande)
++etreFini():boolean
+}
+
+abstract class Case{
+
+}
+
+class CaseVide{
+
+}
+
+class Mur{
++dessiner(Graphics2D,int,int)
+}
+
+class Piege{
++declencher()
++dessine(Graphics2D,int,int)
+}
+
+class Trigger{
++Trigger()
++declencher(Entite)
++dessine(Graphics2D,int,int)
+}
+
+class Potion{
++prendrePotion(Personnage)
++dessine(Graphics2D,int,int)
+}
+
+class Arrivee{
++declencher(Entite)
++dessine(Graphics2D,int,int)
+}
+
+class Excalibur{
++declencher(Entite)
++prendreEpee(Personnage)
++dessine(Graphics2D,int,int)
+}
+
+
+
+abstract class Placeable{
++setup(JeuZeldiablo, Labyrinthe)
++declencher(Entite)
++isCaseVide():boolean
++dessiner(Graphics2D, int, int)
++prendreEpee(Personnage)
++prendrePotion(Personnage)
+}
+
+abstract class Traversable{
+isCaseVide():boolean
+}
+
+abstract class Declanchable{
+#trouver : boolean
++Dechanchable()
++isTrouver():boolean
+}
+
+
+
+class Monstre {
++Monstre(int,int)
++Monstre()
++ajouterLab(Labyrinthe):boolean
++attaquer():boolean
++evoluer(int)
+}
+
+class Fantome {
++Fantome(int,int)
++Fantome()
++dessiner(Graphics2D g, int i, int i1)
++deplacer()
+}
+
+class Troll {
++Troll(int,int)
++Troll()
++dessiner(Graphics2D g, int i, int i1)
+}
+
+class Serpent {
++Serpent(int,int)
++Serpent()
++dessiner(Graphics2D g, int i, int i1)
+}
+
+'''relations
+Entite <|-- Monstre
+Entite <|-- Personnage
+Monstre <|-- Troll
+Monstre <|-- Fantome
+Monstre <|-- Serpent
+Case <|-- Mur
+Placeable <|-- Case
+Traversable <|-- CaseVide
+Declanchable <|-- Piege
+Declanchable <|-- Trigger
+Declanchable <|-- Arrivee
+Declanchable <|-- Potion
+Declanchable <|-- Excalibur
+Placeable <|-- Entite
+Traversable <|-- Declanchable
+Case <|-- Traversable
+
+
+Jeu <|.. JeuZeldiablo
+DessinJeu <|.. DessinZeldiablo
+
+Monstre "*" --> "*" Labyrinthe  : -monstres
+Entite "1" --> "*" Labyrinthe  : -lab
+JeuZeldiablo "1" --> "1" Labyrinthe  : -labyrinthe
+JeuZeldiablo "1" --> "*" Personnage  : -personnage
+JeuZeldiablo "1" --> "1" Monstre : - <List>monstres
+DessinZeldiablo "1" --> "*" JeuZeldiablo  : dessinZeldiablo
+@enduml
