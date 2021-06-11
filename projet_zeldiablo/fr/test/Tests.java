@@ -5,6 +5,7 @@ import fr.Labyrinthe;
 import fr.placeable.entites.Monstre;
 import fr.placeable.entites.Personnage;
 import fr.moteurJeu.Commande;
+import fr.placeable.entites.Troll;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -24,7 +25,7 @@ public class Tests {
     public void test_constructeur_Entite() {
         Labyrinthe lab = new Labyrinthe();
         Personnage personnage = new Personnage(0,1);
-        Monstre monstre = new Monstre(0,0);
+        Monstre monstre = new Troll(0,0);
         personnage.ajouterLab(lab);
         monstre.ajouterLab(lab);
         assertEquals("position x differente pour personnage.",0, personnage.getX());
@@ -48,7 +49,7 @@ public class Tests {
 
     @Test public void test_methode_isCaseVide() {
         Labyrinthe lab = new Labyrinthe();
-        Monstre monstreQuiBloque = new Monstre(0,0);
+        Monstre monstreQuiBloque = new Troll(0,0);
         Personnage personnageQuiBouge = new Personnage(0,1);
         personnageQuiBouge.ajouterLab(lab);
         monstreQuiBloque.ajouterLab(lab);

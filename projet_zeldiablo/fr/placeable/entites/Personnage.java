@@ -1,6 +1,7 @@
 package fr.placeable.entites;
 
 import fr.Labyrinthe;
+import fr.moteurJeu.Commande;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -14,7 +15,9 @@ public class Personnage extends Entite {
     /**
      * Constructeur qui défjnit la postion initiale en paramètres
      * @param x
+     *      int
      * @param y
+     *      int
      */
     public Personnage(int x, int y) {
         super(x, y);
@@ -29,6 +32,14 @@ public class Personnage extends Entite {
         this.pv = 20;
     }
 
+    public void attaquer(Commande c){
+        jeu.getMonstres().forEach(monstre -> {
+            if (c.attaquer && (((monstre.getX() == x+1 || monstre.getX() == x-1) && monstre.getY() == y)
+                    || ((monstre.getY() == y+1 || monstre.getY() == y-1) && monstre.getX() == x))){
+                monstre.diminuerPv(this.degats);
+            }
+        });
+    }
 
     @Override
     public void dessiner(Graphics2D g, int i, int i1) {

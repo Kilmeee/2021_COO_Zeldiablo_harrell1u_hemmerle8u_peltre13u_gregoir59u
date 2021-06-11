@@ -101,14 +101,4 @@ public abstract class Entite extends Placeable {
         }
         return res;
     }
-
-    public void attaquer(Commande c){
-        System.out.println(c.attaquer);
-        jeu.getMonstres().forEach(monstre -> {
-            if (c.attaquer && (((monstre.getX() == x+1 || monstre.getX() == x-1) && monstre.getY() == y)
-                    || ((monstre.getY() == y+1 || monstre.getY() == y-1) && monstre.getX() == x))){
-                monstre.diminuerPv(this.degats);
-            }
-        });
-    }
 }

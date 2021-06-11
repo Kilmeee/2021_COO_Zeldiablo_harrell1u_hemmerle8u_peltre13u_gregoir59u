@@ -4,9 +4,7 @@ import fr.moteurJeu.Commande;
 import fr.moteurJeu.Jeu;
 import fr.placeable.Placeable;
 import fr.placeable.Traversable;
-import fr.placeable.entites.Entite;
-import fr.placeable.entites.Monstre;
-import fr.placeable.entites.Personnage;
+import fr.placeable.entites.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,8 +40,8 @@ public class JeuZeldiablo implements Jeu {
 
         timer = 0;
 
-        Monstre m1 = new Monstre(3, 4);
-        Monstre m2 = new Monstre(5, 6);
+        Monstre m1 = new Serpent(3, 4);
+        Monstre m2 = new Troll(5, 6);
 
         personnage.ajouterLab(labyrinthe);
         m1.ajouterLab(labyrinthe);
@@ -67,7 +65,11 @@ public class JeuZeldiablo implements Jeu {
         if(timer < 6) timer++;
         else {
             timer = 0;
-            monstres.forEach(Entite::deplacer);
+            monstres.forEach(monstre -> {
+                monstre.attaquer();
+                monstre.deplacer();
+            });
+
         }
     }
 
