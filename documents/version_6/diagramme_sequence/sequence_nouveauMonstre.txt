@@ -1,0 +1,30 @@
+@startuml
+
+participant "jeu:JeuZeldiablo" as jeu
+participant "r:Random" as r
+
+jeu -> jeu : nouveauMonstre()
+activate jeu
+
+jeu -> r : r.nextInt(20)
+activate r
+jeu <-- r : int
+deactivate r
+
+jeu -> r : r.nextInt(12)
+activate r
+jeu <-- r : int
+deactivate r
+
+jeu -> r : r.nextInt(3)
+activate r
+jeu <-- r : int
+deactivate r
+
+create "m:Monstre"
+jeu -> "m:Monstre" : new
+
+jeu <-- jeu : m
+deactivate jeu
+
+@enduml

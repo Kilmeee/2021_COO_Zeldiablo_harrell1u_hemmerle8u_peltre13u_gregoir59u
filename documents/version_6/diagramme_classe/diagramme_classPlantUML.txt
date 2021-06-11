@@ -52,6 +52,7 @@ class JeuZeldiablo{
 +getMonstres():List<Monstre>
 +getLabyrinthe():Labyrinthe
 +getPersonnage():Personnage
+-nouveauMonstre():Monstre
 }
 
 interface DessinJeu{
@@ -87,7 +88,7 @@ class Trigger{
 }
 
 class Potion{
-+prendrePotion(Personnage)
++declencher(Entite)
 +dessine(Graphics2D,int,int)
 }
 
@@ -98,7 +99,6 @@ class Arrivee{
 
 class Excalibur{
 +declencher(Entite)
-+prendreEpee(Personnage)
 +dessine(Graphics2D,int,int)
 }
 

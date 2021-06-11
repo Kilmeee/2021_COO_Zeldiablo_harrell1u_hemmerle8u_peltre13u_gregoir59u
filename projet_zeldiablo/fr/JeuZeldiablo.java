@@ -115,7 +115,7 @@ public class JeuZeldiablo implements Jeu {
      *
      * @return
      */
-    public Monstre nouveauMonstre() {
+    private Monstre nouveauMonstre() {
         Monstre res;
         int x = r.nextInt(20);
         int y = r.nextInt(12);
