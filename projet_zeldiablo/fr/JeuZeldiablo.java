@@ -59,18 +59,16 @@ public class JeuZeldiablo implements Jeu {
         personnage.deplacer(commandeUser);
         personnage.attaquer(commandeUser);
         for(int i = 0; i < monstres.size(); i++){
-            if(monstres.get(i).isDead()) monstres.remove((monstres.get(i)));
-        }
-
-        if(timer < 6) timer++;
-        else {
-            timer = 0;
-            monstres.forEach(monstre -> {
+            Monstre monstre = monstres.get(i);
+            if(monstre.isDead()) monstres.remove(monstre);
+            else if(timer > 7) {
                 monstre.attaquer();
                 monstre.deplacer();
-            });
-
+                timer = 0;
+            }
         }
+
+        timer++;
     }
 
 
