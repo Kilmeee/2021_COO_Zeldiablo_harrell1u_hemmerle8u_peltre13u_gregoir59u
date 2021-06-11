@@ -24,8 +24,12 @@ public class Piege extends Declanchable{
     @Override
     public void dessiner(Graphics2D g, int i, int i1) {
         if(isTrouver()) {
-            g.setColor(new Color(222,184,135));
-            g.fillRect(i1*50, i*50, 50, 50);
+            try{
+                BufferedImage image = ImageIO.read(new File("sprite/piege.png"));
+                g.drawImage(image, i1* Labyrinthe.TAILLE_CASE, i*Labyrinthe.TAILLE_CASE,null);
+            } catch (IOException e){
+                e.printStackTrace();
+            }
         } else {
             try{
                 BufferedImage image = ImageIO.read(new File("sprite/grass.png"));
