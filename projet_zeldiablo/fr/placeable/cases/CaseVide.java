@@ -9,7 +9,22 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
+/**
+ * Classe héritant de Traversable qui est une case qui peut être traversée
+ */
+
 public class CaseVide extends Traversable {
+
+    /**
+     * Méthode de dessin qui affiche la case vide
+     * @param g
+     *      Graphics2D
+     * @param i
+     *      int x
+     * @param i1
+     *      int y
+     */
+
     @Override
     public void dessiner(Graphics2D g, int i, int i1) {
         try{

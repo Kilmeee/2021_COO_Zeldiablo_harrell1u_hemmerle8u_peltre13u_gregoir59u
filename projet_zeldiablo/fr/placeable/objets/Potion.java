@@ -3,7 +3,6 @@ package fr.placeable.objets;
 import fr.Labyrinthe;
 import fr.placeable.Declanchable;
 import fr.placeable.entites.Entite;
-import fr.placeable.entites.Personnage;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -19,14 +18,13 @@ public class Potion extends Declanchable {
 
     @Override
     public void declencher(Entite e) {
-        prendrePotion(e);
+        activerPotion(e);
     }
 
-    @Override
-    public void prendrePotion(Entite e) {
+    public void activerPotion(Entite e) {
         if(!isTrouver()){
-            trouver = true;
-            e.prendrePotion();
+            if(e.prendrePotion()) trouver = true;
+
         }
     }
 

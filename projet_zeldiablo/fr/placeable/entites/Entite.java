@@ -1,7 +1,7 @@
 package fr.placeable.entites;
 
 import fr.Labyrinthe;
-import fr.iamonstre.Deplacement;
+import fr.iamonstre.DeplacementUtil;
 import fr.iamonstre.Position;
 import fr.moteurJeu.Commande;
 import fr.placeable.Placeable;
@@ -55,13 +55,13 @@ public abstract class Entite extends Placeable {
     }
 
     public void deplacer() {
-        Position position = Deplacement.deplacementAleatoire(this);
+        Position position = DeplacementUtil.deplacementAleatoire(this);
         int posX = position.getX();
         int posY = position.getY();
         int i = 0;
         while(posX >= lab.getTailleX() || posX < 0 || posY >= lab.getTailleY() || posY < 0 || !lab.getCarte()[posY][posX].isCaseVide(posX, posY)
                 || (posX == jeu.getPersonnage().getX() && posY == jeu.getPersonnage().getY())) {
-            position = Deplacement.deplacementAleatoire(this);
+            position = DeplacementUtil.deplacementAleatoire(this);
             posX = position.getX();
             posY = position.getY();
             if(i > 4) return;
@@ -125,11 +125,11 @@ public abstract class Entite extends Placeable {
 
     public void gagne() { }
 
-    public void prendreEpee() {
-
+    public boolean prendreEpee() {
+        return false;
     }
 
-    public void prendrePotion() {
-
+    public boolean prendrePotion() {
+        return false;
     }
 }

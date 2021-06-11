@@ -8,7 +8,21 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
+/**
+ * Classe héritant de Case qui est un mur donc non traversable
+ */
+
 public class Mur extends Case {
+
+    /**
+     * Méthode de dessin pour dessiner graphiquement un mur
+     * @param g
+     *      Graphics2D
+     * @param i
+     *      int x
+     * @param i1
+     *      int y
+     */
 
     @Override
     public void dessiner(Graphics2D g, int i, int i1) {
