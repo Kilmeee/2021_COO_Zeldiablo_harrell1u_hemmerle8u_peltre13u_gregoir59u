@@ -1,7 +1,7 @@
 package fr.placeable.entites;
 
 import fr.Labyrinthe;
-import fr.iamonstre.Deplacement;
+import fr.iamonstre.DeplacementUtil;
 import fr.iamonstre.Position;
 
 import javax.imageio.ImageIO;
@@ -42,13 +42,13 @@ public class Fantome extends Monstre {
 
     @Override
     public void deplacer() {
-        Position position = Deplacement.deplacementAleatoire(this);
+        Position position = DeplacementUtil.deplacementAleatoire(this);
         int posX = position.getX();
         int posY = position.getY();
         int i = 0;
         while(posX >= lab.getTailleX() || posX < 0 || posY >= lab.getTailleY() || posY < 0 ||
                 (posX == jeu.getPersonnage().getX() && posY == jeu.getPersonnage().getY())) {
-            position = Deplacement.deplacementAleatoire(this);
+            position = DeplacementUtil.deplacementAleatoire(this);
             posX = position.getX();
             posY = position.getY();
             if(i > 4) return;

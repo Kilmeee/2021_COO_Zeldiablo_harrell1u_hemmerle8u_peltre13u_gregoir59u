@@ -3,7 +3,6 @@ package fr.placeable.objets;
 import fr.Labyrinthe;
 import fr.placeable.Declanchable;
 import fr.placeable.entites.Entite;
-import fr.placeable.entites.Personnage;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -19,13 +18,12 @@ public class Excalibur extends Declanchable {
 
     @Override
     public void declencher(Entite e) {
-        prendreEpee(e);
+        activerEpee(e);
     }
 
-    public void prendreEpee(Entite e) {
+    public void activerEpee(Entite e) {
         if (!isTrouver()) {
-            trouver = true;
-            e.prendreEpee();
+            if(e.prendreEpee()) trouver = true;
         }
     }
 
