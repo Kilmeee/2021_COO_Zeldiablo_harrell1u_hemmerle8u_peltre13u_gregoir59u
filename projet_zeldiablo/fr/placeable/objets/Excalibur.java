@@ -11,6 +11,10 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
+/**
+ * @class Excalibur
+ * Classe qui modelise une Excalibur (epee)
+ */
 public class Excalibur extends Declanchable {
 
     @Override

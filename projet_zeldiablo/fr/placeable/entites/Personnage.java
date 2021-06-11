@@ -9,6 +9,10 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
+/**
+ * @class Personnage
+ * Classe qui modelise un personnage
+ */
 public class Personnage extends Entite {
 
     private boolean arrive;

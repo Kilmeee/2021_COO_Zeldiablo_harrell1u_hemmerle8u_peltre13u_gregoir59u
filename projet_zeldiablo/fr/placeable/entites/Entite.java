@@ -6,6 +6,10 @@ import fr.iamonstre.Position;
 import fr.moteurJeu.Commande;
 import fr.placeable.Placeable;
 
+/**
+ * @class Entite
+ * Classe abstraite qui modelise une entite
+ */
 public abstract class Entite extends Placeable {
 
     protected Labyrinthe lab;

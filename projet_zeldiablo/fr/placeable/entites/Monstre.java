@@ -2,6 +2,10 @@ package fr.placeable.entites;
 
 import fr.Labyrinthe;
 
+/**
+ * @class Monstre
+ * Classe abstraite qui modelise un monstre
+ */
 public abstract class Monstre extends Entite {
 
     protected int timer;
