@@ -17,8 +17,8 @@ public class Tests {
     @Test
     public void test_constructeur_Labyrinthe() {
         Labyrinthe labyrinthe = new Labyrinthe();
-        assertEquals(100, labyrinthe.getTailleX());
-        assertEquals(60, labyrinthe.getTailleY());
+        assertEquals(20, labyrinthe.getTailleX());
+        assertEquals(12, labyrinthe.getTailleY());
     }
 
     @Test
@@ -45,9 +45,8 @@ public class Tests {
         assertEquals("La postion apres deplacement devrait etre a 2",11,personnage.getX());
     }
 
-
-
-    @Test public void test_methode_isCaseVide() {
+    @Test
+    public void test_methode_isCaseVide() {
         Labyrinthe lab = new Labyrinthe();
         Monstre monstreQuiBloque = new Troll(0,0);
         Personnage personnageQuiBouge = new Personnage(0,1);

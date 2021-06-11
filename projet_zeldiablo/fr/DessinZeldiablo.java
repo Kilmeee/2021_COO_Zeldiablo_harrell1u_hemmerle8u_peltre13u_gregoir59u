@@ -40,6 +40,9 @@ public class DessinZeldiablo implements DessinJeu {
 
         dessinerBarrePv(g);
 
+        textMort(g);
+
+        textArrive(g);
     }
 
     private void dessinerBarrePv(Graphics2D g){
@@ -54,11 +57,28 @@ public class DessinZeldiablo implements DessinJeu {
         }
         if (jeuZeldiablo.getPersonnage().isDead()) {
             g.setColor(Color.red);
-            textPv.append("     VOUS ETES MORT !");
         }
         if (jeuZeldiablo.getPersonnage().isArrive()) {
             g.setColor(new Color(0,150,0));
         }
         g.drawString(textPv.toString(), 5, 615);
+    }
+
+    public void textMort(Graphics2D g) {
+        if(jeuZeldiablo.getPersonnage().isDead()) {
+            Font font = new Font("Arial", Font.PLAIN, 60);
+            g.setFont(font);
+            g.setColor(Color.red);
+            g.drawString("VOUS ETES MORT", 210, 300);
+        }
+    }
+
+    private void textArrive(Graphics2D g) {
+        if(jeuZeldiablo.getPersonnage().isArrive()) {
+            Font font = new Font("Arial", Font.PLAIN, 60);
+            g.setFont(font);
+            g.setColor(new Color(0,150,0));
+            g.drawString("VOUS AVEZ GAGNE", 210, 300);
+        }
     }
 }

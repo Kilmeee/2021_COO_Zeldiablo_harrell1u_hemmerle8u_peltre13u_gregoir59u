@@ -3,6 +3,7 @@ package fr;
 import fr.placeable.*;
 import fr.placeable.cases.*;
 import fr.placeable.entites.Monstre;
+import fr.placeable.entites.Personnage;
 
 public class Labyrinthe {
 
@@ -12,6 +13,7 @@ public class Labyrinthe {
     private int tailleY;
 
     private Placeable[][] carte;
+    private Placeable[][] niveau2;
 
 
     public Labyrinthe() {
@@ -43,6 +45,21 @@ public class Labyrinthe {
                 {cv,mur,cv,cv,mur,cv,mur,mur,mur,mur,cv,cv,mur,mur,mur,mur,cv,mur,pg2,mur},
                 {cv,cv,cv,cv,mur,cv,cv,cv,cv,mur,cv,cv,pg1,cv,cv,cv,cv,mur,cv,cv}
         };
+        this.niveau2 = new Placeable[][]{
+                {cv,mur,mur,cv,cv,cv,cv,cv,mur,cv,cv,cv,cv,cv,cv,cv,mur,cv,cv,cv},
+                {cv,cv,mur,cv,mur,mur,mur,cv,mur,cv,cv,mur,mur,mur,mur,cv,mur,cv,mur,cv},
+                {cv,cv,mur,cv,mur,p3,mur,cv,mur,cv,cv,mur,cv,cv,mur,cv,mur,cv,mur,cv},
+                {mur,cv,mur,cv,mur,cv,mur,cv,mur,mur,cv,mur,cv,cv,mur,cv,mur,cv,mur,cv},
+                {mur,cv,cv,cv,mur,cv,mur,cv,cv,cv,cv,pg1,cv,cv,mur,cv,pg3,cv,mur,cv},
+                {mur,mur,mur,cv,mur,cv,cv,cv,cv,cv,cv,mur,cv,cv,mur,cv,cv,cv,mur,cv},
+                {cv,cv,cv,cv,mur,mur,mur,mur,mur,mur,cv,mur,cv,cv,mur,mur,mur,mur,mur,mur},
+                {cv,mur,mur,cv,mur,cv,mur,p1,cv,mur,mur,mur,mur,cv,mur,cv,cv,cv,mur,cv},
+                {cv,mur,mur,mur,mur,cv,mur,cv,cv,tg,cv,cv,cv,cv,cv,cv,mur,cv,mur,cv},
+                {cv,mur,cv,p2,cv,cv,mur,mur,mur,cv,cv,cv,cv,cv,pg2,cv,mur,cv,mur,cv},
+                {cv,mur,mur,cv,mur,cv,cv,cv,mur,mur,mur,mur,mur,mur,cv,cv,mur,cv,mur,cv},
+                {cv,cv,cv,cv,mur,mur,mur,cv,mur,cv,cv,cv,cv,cv,cv,cv,mur,cv,cv,cv}
+        };
+
     }
 
     public int getTailleX() {

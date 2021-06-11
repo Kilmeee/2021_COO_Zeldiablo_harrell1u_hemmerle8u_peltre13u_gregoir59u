@@ -21,6 +21,8 @@ public class JeuZeldiablo implements Jeu {
      */
     private Labyrinthe labyrinthe;
 
+    private boolean fini;
+
     /**
      * Attribut privé fr.placeable.entites.Personnage qui permet de gérer le personnage en jeu.
      */
@@ -43,6 +45,7 @@ public class JeuZeldiablo implements Jeu {
 
         timer = 0;
         this.r = new Random();
+        this.fini = false;
 
 
 
@@ -71,12 +74,15 @@ public class JeuZeldiablo implements Jeu {
             else monstre.evoluer(timer);
         }
         timer++;
+        if(personnage.isDead() || personnage.isArrive()) {
+            this.fini = true;
+        }
     }
 
 
     @Override
     public boolean etreFini() {
-        return false;
+        return fini;
     }
 
     public List<Monstre> getMonstres() {
