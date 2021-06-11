@@ -63,7 +63,7 @@ public abstract class Entite extends Placeable {
     }
 
     /**
-     *
+     * Méthode déplacer aléatoire des monstres
      */
     public void deplacer() {
         Position position = DeplacementUtil.deplacementAleatoire(this);
@@ -85,7 +85,7 @@ public abstract class Entite extends Placeable {
     }
 
     /**
-     *
+     * retourne la position x
      * @return
      */
     public int getX() {
@@ -93,7 +93,7 @@ public abstract class Entite extends Placeable {
     }
 
     /**
-     *
+     * retourne la position y
      * @return
      */
     public int getY() {
@@ -101,7 +101,7 @@ public abstract class Entite extends Placeable {
     }
 
     /**
-     *
+     * retourne les points de vies
      * @return
      */
     public int getPv(){
@@ -109,7 +109,7 @@ public abstract class Entite extends Placeable {
     }
 
     /**
-     *
+     * retourne les dégats
      * @return
      */
     public int getDegats() {
@@ -117,7 +117,7 @@ public abstract class Entite extends Placeable {
     }
 
     /**
-     *
+     * retourne un boolean si l'entite est morte.
      * @return
      */
     public boolean isDead() {
@@ -125,8 +125,8 @@ public abstract class Entite extends Placeable {
     }
 
     /**
-     *
-     * @param degats
+     * permet de retirer des points de vie à l'entite
+     * @param degats point de vie retirée
      */
     public void diminuerPv(int degats){
         if(degats >= 0) {
@@ -140,7 +140,7 @@ public abstract class Entite extends Placeable {
     }
 
     /**
-     *
+     * permet d'ajouter des points de vie à l'entite
      * @param pv
      */
     public void ajouterPv(int pv) {
@@ -154,7 +154,7 @@ public abstract class Entite extends Placeable {
     }
 
     /**
-     *
+     *  Sert à ajouter une entite au jeu.
      * @param lab
      * @return
      */

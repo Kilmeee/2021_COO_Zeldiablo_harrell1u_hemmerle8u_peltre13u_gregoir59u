@@ -53,7 +53,7 @@ public abstract class Placeable {
     }
 
     /**
-     *
+     * Permet de dessiner l'élément en question
      * @param g
      * @param i
      * @param i1
