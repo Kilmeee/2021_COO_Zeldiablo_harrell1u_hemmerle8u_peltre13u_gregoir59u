@@ -149,10 +149,24 @@ public class Tests {
     @Test
     public void test_methode_monstre_deplacerSurEpee() {
         Labyrinthe lab = new Labyrinthe();
-        Monstre monstre = new Troll(13, 0);
+        Monstre monstre = new Troll(12, 0);
+        monstre.ajouterJeu(lab);
         Commande commande = new Commande();
         commande.droite = true;
         monstre.deplacer(commande);
+
+        assertFalse("L'épée ne devrait pas être trouvée", lab.getCarte()[0][13].isTrouver());
     }
 
+    @Test
+    public void test_methode_personnage_deplacerSurEpee() {
+        Labyrinthe lab = new Labyrinthe();
+        Personnage personnage = new Personnage(12, 0);
+        personnage.ajouterJeu(lab);
+        Commande commande = new Commande();
+        commande.droite = true;
+        personnage.deplacer(commande);
+
+        assertTrue("L'épée devrait être trouvée", lab.getCarte()[0][13].isTrouver());
+    }
 }
