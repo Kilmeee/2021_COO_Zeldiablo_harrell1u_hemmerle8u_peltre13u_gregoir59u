@@ -6,8 +6,11 @@ import fr.placeable.cases.Mur;
 import fr.placeable.cases.Piege;
 import fr.placeable.cases.Trigger;
 
+import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 
 /**
  * Classe permettant de représenter le jeu graphiquement en 2D
@@ -66,19 +69,23 @@ public class DessinZeldiablo implements DessinJeu {
 
     public void textMort(Graphics2D g) {
         if(jeuZeldiablo.getPersonnage().isDead()) {
-            Font font = new Font("Arial", Font.PLAIN, 60);
-            g.setFont(font);
-            g.setColor(Color.red);
-            g.drawString("VOUS ETES MORT", 210, 300);
+            try{
+                BufferedImage image = ImageIO.read(new File("sprite/defaite.png"));
+                g.drawImage(image, 0, 0,null);
+            } catch (IOException e){
+                e.printStackTrace();
+            }
         }
     }
 
     private void textArrive(Graphics2D g) {
-        if(jeuZeldiablo.getPersonnage().isArrive()) {
-            Font font = new Font("Arial", Font.PLAIN, 60);
-            g.setFont(font);
-            g.setColor(new Color(0,150,0));
-            g.drawString("VOUS AVEZ GAGNE", 210, 300);
+        if(jeuZeldiablo.getPersonnage().isArrive())  {
+            try{
+                BufferedImage image = ImageIO.read(new File("sprite/victory.jpg"));
+                g.drawImage(image, 0, 0,null);
+            } catch (IOException e){
+                e.printStackTrace();
+            }
         }
     }
 }
