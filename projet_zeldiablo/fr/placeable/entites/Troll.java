@@ -12,10 +12,16 @@ public class Troll extends Monstre {
 
     public Troll() {
         super();
+        this.pv = 50;
+        this.degats = 5;
+        this.timer = 10;
     }
 
     public Troll(int x, int y) {
         super(x, y);
+        this.pv = 50;
+        this.degats = 5;
+        this.timer = 10;
     }
 
     @Override

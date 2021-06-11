@@ -8,6 +8,7 @@ import fr.placeable.entites.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 /**
  * Classe JeuPerso qui permet de gérer le Jeu.
@@ -29,6 +30,8 @@ public class JeuZeldiablo implements Jeu {
 
     private int timer;
 
+    private Random r;
+
     /**
      * Constructeur de base qui initialise le Jeu.
      */
@@ -39,13 +42,17 @@ public class JeuZeldiablo implements Jeu {
         Placeable.setup(this, labyrinthe);
 
         timer = 0;
+        this.r = new Random();
 
-        Monstre m1 = new Serpent(3, 4);
-        Monstre m2 = new Troll(5, 6);
+
 
         personnage.ajouterLab(labyrinthe);
-        m1.ajouterLab(labyrinthe);
-        m2.ajouterLab(labyrinthe);
+        nouveauMonstre().ajouterLab(labyrinthe);
+        nouveauMonstre().ajouterLab(labyrinthe);
+        nouveauMonstre().ajouterLab(labyrinthe);
+        nouveauMonstre().ajouterLab(labyrinthe);
+        nouveauMonstre().ajouterLab(labyrinthe);
+        nouveauMonstre().ajouterLab(labyrinthe);
     }
 
     /**
@@ -61,11 +68,8 @@ public class JeuZeldiablo implements Jeu {
         for(int i = 0; i < monstres.size(); i++){
             Monstre monstre = monstres.get(i);
             if(monstre.isDead()) monstres.remove(monstre);
-            else if(timer > 7 && !monstre.attaquer()) {
-                monstre.deplacer();
-            }
+            else monstre.evoluer(timer);
         }
-        if(timer > 7) timer = 0;
         timer++;
     }
 
@@ -85,5 +89,25 @@ public class JeuZeldiablo implements Jeu {
 
     public Personnage getPersonnage() {
         return personnage;
+    }
+
+    public Monstre nouveauMonstre() {
+        Monstre res;
+        int x = r.nextInt(20);
+        int y = r.nextInt(12);
+        while(!labyrinthe.getCarte()[y][x].isCaseVide(x, y)) {
+            x = r.nextInt(20);
+            y = r.nextInt(12);
+        }
+        int random = r.nextInt(3);
+        if(random > 1) {
+            res = new Fantome(x, y);
+        } else if (random > 0) {
+            res = new Serpent(x, y);
+        } else {
+            res = new Troll(x, y);
+        }
+        System.out.println(random);
+        return res;
     }
 }

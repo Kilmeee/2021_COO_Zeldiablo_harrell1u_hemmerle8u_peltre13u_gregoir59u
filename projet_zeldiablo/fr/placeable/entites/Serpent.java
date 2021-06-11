@@ -12,10 +12,16 @@ public class Serpent extends Monstre {
 
     public Serpent() {
         super();
+        this.pv = 20;
+        this.degats = 2;
+        this.timer = 4;
     }
 
     public Serpent(int x, int y) {
         super(x, y);
+        this.pv = 20;
+        this.degats = 2;
+        this.timer = 4;
     }
 
     @Override
