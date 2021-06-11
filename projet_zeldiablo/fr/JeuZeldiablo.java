@@ -79,8 +79,9 @@ public class JeuZeldiablo implements Jeu {
     }
 
     /**
-     *
+     * Getter permettant de savoir si le jeu est fini ou non
      * @return
+     *      boolean
      */
     @Override
     public boolean etreFini() {
@@ -88,32 +89,36 @@ public class JeuZeldiablo implements Jeu {
     }
 
     /**
-     *
+     * Getter de la liste de monstres
      * @return
+     *      List<Monstre>
      */
     public List<Monstre> getMonstres() {
         return monstres;
     }
 
     /**
-     *
+     * Getter permettant de récupérer le labyrinthe
      * @return
+     *      Labyrinthe
      */
     public Labyrinthe getLabyrinthe() {
         return labyrinthe;
     }
 
     /**
-     *
+     * Getter permettant de récupérer le personnage
      * @return
+     *      Personnage
      */
     public Personnage getPersonnage() {
         return personnage;
     }
 
     /**
-     *
+     * Méthode privée permettant de créer un nouveau monstre aléatoire à une position aléatoire
      * @return
+     *      Monstre
      */
     private Monstre nouveauMonstre() {
         Monstre res;
@@ -135,8 +140,9 @@ public class JeuZeldiablo implements Jeu {
     }
 
     /**
-     *
+     * Méthode publique setter de Personnage
      * @param personnage
+     *      Personnage
      */
     public void ajouterPersonnage(Personnage personnage) {
         this.personnage = personnage;
