@@ -26,10 +26,11 @@ public class Labyrinthe {
         Potion p1 = new Potion();
         Potion p2 = new Potion();
         Potion p3 = new Potion();
+        Excalibur epee = new Excalibur();
         Trigger tg = new Trigger();
         Arrivee arr = new Arrivee();
         this.carte = new Placeable[][]{
-                {cv,cv,cv,cv,cv,cv,cv,cv,cv,mur,cv,cv,cv,cv,mur,cv,cv,mur,cv,cv},
+                {cv,cv,cv,cv,cv,cv,cv,cv,cv,mur,cv,cv,cv,epee,mur,cv,cv,mur,cv,cv},
                 {cv,mur,mur,mur,mur,mur,mur,mur,cv,mur,cv,mur,mur,mur,mur,cv,cv,cv,cv,cv},
                 {cv,cv,cv,cv,cv,cv,cv,mur,cv,mur,cv,mur,cv,cv,pg3,cv,cv,mur,cv,cv},
                 {cv,mur,mur,mur,mur,mur,cv,mur,cv,mur,cv,mur,mur,mur,cv,mur,cv,mur,mur,mur},

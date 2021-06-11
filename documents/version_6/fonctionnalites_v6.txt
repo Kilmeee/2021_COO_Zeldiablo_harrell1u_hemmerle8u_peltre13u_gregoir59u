@@ -1,0 +1,30 @@
+*fonctionnalites
+
+fonctionnalite 1 :
+responsable : Keanu Harrell
+
+fonctionnalité 2 :
+responsable : Gabin Hemmerle
+
+fonctionnalité 3 :
+responsable : Alexis Gregoire
+
+fonctionnalité 4 :
+responsable Yanis Peltre
+
+*realisation
+-Classe
+responsable : Hemmerle Gabin
+description :
+
+-Classe :
+responsable : Harrell Keanu
+description :
+
+
+-Classe
+responsable : Yanis Peltre
+
+
+-Classe
+responsable : Alexis Gregoire

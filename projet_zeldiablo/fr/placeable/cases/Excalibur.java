@@ -11,16 +11,18 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-public class Potion extends Declanchable {
+public class Excalibur extends Declanchable {
 
     @Override
-    public void prendrePotion(Personnage p) {
-        if(!isTrouver()){
+    public void declencher(Entite e) {
+        prendreEpee(e);
+    }
+
+    @Override
+    public void prendreEpee(Personnage p) {
+        if (!isTrouver()) {
             trouver = true;
-            p.diminuerPv(-5);
-            if (p.getPv() > 20) {
-                p.setInitPv();
-            }
+            p.setDegat();
         }
     }
 
@@ -35,7 +37,7 @@ public class Potion extends Declanchable {
             }
         } else {
             try {
-                BufferedImage image = ImageIO.read(new File("sprite/potion.png"));
+                BufferedImage image = ImageIO.read(new File("sprite/epee.png"));
                 g.drawImage(image, i1 * Labyrinthe.TAILLE_CASE, i * Labyrinthe.TAILLE_CASE, null);
             } catch (IOException e) {
                 e.printStackTrace();
@@ -43,3 +45,4 @@ public class Potion extends Declanchable {
         }
     }
 }
+

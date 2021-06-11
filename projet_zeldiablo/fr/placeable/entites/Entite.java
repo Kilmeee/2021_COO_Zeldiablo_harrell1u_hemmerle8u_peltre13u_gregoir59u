@@ -8,7 +8,7 @@ import fr.placeable.Placeable;
 
 public abstract class Entite extends Placeable {
 
-    private Labyrinthe lab;
+    protected Labyrinthe lab;
 
     protected int x, y, pv;
     protected boolean dead;
@@ -66,6 +66,7 @@ public abstract class Entite extends Placeable {
         this.x = posX;
         this.y = posY;
         lab.getCarte()[y][x].declencher(this);
+
     }
 
     public int getX() {
@@ -100,9 +101,6 @@ public abstract class Entite extends Placeable {
             res = true;
         }
         return res;
-    }
-    public void setInitPv() {
-        this.pv = 20;
     }
 
     public void gagne() { }

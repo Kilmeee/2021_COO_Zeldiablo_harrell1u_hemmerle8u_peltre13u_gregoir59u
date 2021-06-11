@@ -3,6 +3,7 @@ package fr.placeable;
 import fr.JeuZeldiablo;
 import fr.Labyrinthe;
 import fr.placeable.entites.Entite;
+import fr.placeable.entites.Personnage;
 
 import java.awt.*;
 
@@ -17,6 +18,12 @@ public abstract class Placeable {
     }
 
     public void declencher(Entite e) {
+    }
+
+    public void prendreEpee(Personnage e){
+    }
+
+    public void prendrePotion(Personnage e){
     }
 
     public boolean isCaseVide(int x, int y) {

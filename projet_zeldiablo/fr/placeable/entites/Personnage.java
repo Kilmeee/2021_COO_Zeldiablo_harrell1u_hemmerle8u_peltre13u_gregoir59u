@@ -63,4 +63,19 @@ public class Personnage extends Entite {
     public void gagne() {
         this.arrive = true;
     }
+
+    @Override
+    public void deplacer() {
+        super.deplacer();
+        System.out.println(lab.getCarte()[y][x]);
+        lab.getCarte()[y][x].prendreEpee(this);
+    }
+
+    public void setInitPv() {
+        this.pv = 20;
+    }
+
+    public void setDegat() {
+        this.degats = 5;
+    }
 }
