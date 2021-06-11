@@ -1,0 +1,10 @@
+@startuml
+title Méthode Dessiner
+participant "dessin:DessinZeldiablo" as d
+participant "perso:Personnage" as p
+
+d -> p : dessiner(Graphics2D,int,int)
+activate p
+d <-- p :
+deactivate p
+@enduml

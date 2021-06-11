@@ -1,0 +1,29 @@
+*fonctionnalites
+
+fonctionnalite 1 : Déplacement aléatoire des monstres (les monstres en générale ici il n'y pas encore de fantomes ou autre).
+responsable : Keanu Harrell
+
+fonctionnalité 2 : Affichage graphiques des sprites
+responsable : Gabin Hemmerle
+
+fonctionnalité 3 :
+responsable : Alexis Gregoire
+
+fonctionnalité 4 :
+responsable Yanis Peltre
+
+*realisation
+-Classe
+responsable : Hemmerle Gabin
+
+
+-Classe
+responsable : Harrell Keanu
+
+
+-Classe
+responsable : Yanis Peltre
+
+
+-Classe
+responsable : Alexis Gregoire
