@@ -56,6 +56,9 @@ public class DessinZeldiablo implements DessinJeu {
             g.setColor(Color.red);
             textPv.append("     VOUS ETES MORT !");
         }
+        if (jeuZeldiablo.getPersonnage().isArrive()) {
+            g.setColor(new Color(0,150,0));
+        }
         g.drawString(textPv.toString(), 5, 615);
     }
 }

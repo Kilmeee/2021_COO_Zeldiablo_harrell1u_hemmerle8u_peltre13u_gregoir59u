@@ -11,6 +11,7 @@ import java.io.IOException;
 
 public class Personnage extends Entite {
 
+    private boolean arrive;
 
     /**
      * Constructeur qui défjnit la postion initiale en paramètres
@@ -22,6 +23,7 @@ public class Personnage extends Entite {
     public Personnage(int x, int y) {
         super(x, y);
         this.pv = 20;
+        this.arrive = false;
     }
 
     /**
@@ -30,6 +32,7 @@ public class Personnage extends Entite {
     public Personnage(){
         super();
         this.pv = 20;
+        this.arrive = false;
     }
 
     public void attaquer(Commande c){
@@ -53,5 +56,11 @@ public class Personnage extends Entite {
                 e.printStackTrace();
             }
         }
+    }
+    public boolean isArrive() {return this.arrive; }
+
+    @Override
+    public void gagne() {
+        this.arrive = true;
     }
 }
