@@ -8,6 +8,10 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
+/**
+ * @class Troll
+ * Classe qui modelise un troll
+ */
 public class Troll extends Monstre {
 
     public Troll() {

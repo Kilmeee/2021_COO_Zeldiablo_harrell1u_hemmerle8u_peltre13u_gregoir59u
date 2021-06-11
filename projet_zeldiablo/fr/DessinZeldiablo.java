@@ -67,7 +67,7 @@ public class DessinZeldiablo implements DessinJeu {
         g.drawString(textPv.toString(), 5, 615);
     }
 
-    public void textMort(Graphics2D g) {
+    private void textMort(Graphics2D g) {
         if(jeuZeldiablo.getPersonnage().isDead()) {
             try{
                 BufferedImage image = ImageIO.read(new File("sprite/defaite.png"));

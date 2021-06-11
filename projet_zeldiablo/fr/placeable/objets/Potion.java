@@ -11,6 +11,10 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
+/**
+ * @class Potion
+ * Classe qui modelise une potion
+ */
 public class Potion extends Declanchable {
 
     @Override

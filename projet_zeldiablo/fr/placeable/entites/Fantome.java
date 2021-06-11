@@ -10,6 +10,10 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
+/**
+ * @class Fantome
+ * Classe qui modélise un fantome
+ */
 public class Fantome extends Monstre {
 
     public Fantome() {

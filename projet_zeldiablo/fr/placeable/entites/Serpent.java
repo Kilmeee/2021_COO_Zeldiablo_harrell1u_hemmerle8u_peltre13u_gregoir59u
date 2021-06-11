@@ -8,6 +8,10 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
+/**
+ * @class Serpent
+ * Classe qui modelise un serpent
+ */
 public class Serpent extends Monstre {
 
     public Serpent() {
