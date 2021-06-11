@@ -8,7 +8,7 @@ import fr.placeable.Placeable;
 
 public abstract class Entite extends Placeable {
 
-    private Labyrinthe lab;
+    protected Labyrinthe lab;
 
     protected int x, y, pv;
     protected boolean dead;

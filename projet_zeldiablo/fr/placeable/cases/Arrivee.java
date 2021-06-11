@@ -1,6 +1,5 @@
 package fr.placeable.cases;
 
-import fr.DessinZeldiablo;
 import fr.Labyrinthe;
 import fr.placeable.Declanchable;
 import fr.placeable.entites.Entite;
