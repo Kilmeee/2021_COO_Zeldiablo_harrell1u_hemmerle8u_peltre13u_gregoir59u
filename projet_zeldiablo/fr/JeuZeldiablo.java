@@ -61,9 +61,8 @@ public class JeuZeldiablo implements Jeu {
         for(int i = 0; i < monstres.size(); i++){
             Monstre monstre = monstres.get(i);
             if(monstre.isDead()) monstres.remove(monstre);
-            else if(timer > 7) {
-                if(!monstre.attaquer()) monstre.deplacer();
-                System.out.println(monstre);
+            else if(timer > 7 && !monstre.attaquer()) {
+                monstre.deplacer();
             }
         }
         if(timer > 7) timer = 0;
