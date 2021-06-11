@@ -42,9 +42,11 @@ public class Personnage extends Entite {
     }
 
     /**
-     *
+     * Méthode permettant d'ajouter un personnage au jeu
      * @param lab
+     *      Labyrinthe
      * @return
+     *      boolean
      */
     @Override
     public boolean ajouterJeu(Labyrinthe lab) {
@@ -53,8 +55,9 @@ public class Personnage extends Entite {
     }
 
     /**
-     *
+     * Méthode permettant d'attaquer à la commande E sur tous les monstres se trouvant à 1 cases du joueur
      * @param c
+     *      Commande
      */
     public void attaquer(Commande c){
         jeu.getMonstres().forEach(monstre -> {
@@ -66,10 +69,13 @@ public class Personnage extends Entite {
     }
 
     /**
-     *
+     * Méthode publique permettant de dessiner le personnage
      * @param g
+     *      Graphics2D
      * @param i
+     *      int x
      * @param i1
+     *      int y
      */
     @Override
     public void dessiner(Graphics2D g, int i, int i1) {
@@ -86,13 +92,14 @@ public class Personnage extends Entite {
     }
 
     /**
-     *
+     * Getter permettant de savoir si le joueur a fini ou non
      * @return
+     *      boolean
      */
     public boolean isArrive() {return this.arrive; }
 
     /**
-     *
+     * Méthode publique permettant de gagner le jeu
      */
     @Override
     public void gagne() {
@@ -100,8 +107,9 @@ public class Personnage extends Entite {
     }
 
     /**
-     *
+     * Méthode publique permettant de prendre l'épée lorsque l'on marche dessus
      * @return
+     *      boolean
      */
     @Override
     public boolean prendreEpee() {
@@ -110,8 +118,9 @@ public class Personnage extends Entite {
     }
 
     /**
-     *
+     * Méthode publique permettant de prendre la potion lorsque l'on marche dessus
      * @return
+     *      boolean
      */
     @Override
     public boolean prendrePotion() {
