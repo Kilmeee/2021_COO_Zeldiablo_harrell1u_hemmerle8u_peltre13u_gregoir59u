@@ -30,6 +30,7 @@ public abstract class Entite extends Placeable {
     /**
      * Méthode deplacer qui consiste à déplacer le personnage en fonction du paramètre Commande.
      * @param direction
+     *      Direction
      */
     public void deplacer(Commande direction){
         if(dead) {
@@ -102,9 +103,10 @@ public abstract class Entite extends Placeable {
     }
 
     public void attaquer(Commande c){
+        System.out.println(c.attaquer);
         jeu.getMonstres().forEach(monstre -> {
-            if (c.attaquer && ((monstre.getX() == x+1 || monstre.getX() == x-1) && monstre.getY() == y)
-                    || ((monstre.getY() == y+1 || monstre.getY() == y-1) && monstre.getX() == x)){
+            if (c.attaquer && (((monstre.getX() == x+1 || monstre.getX() == x-1) && monstre.getY() == y)
+                    || ((monstre.getY() == y+1 || monstre.getY() == y-1) && monstre.getX() == x))){
                 monstre.diminuerPv(this.degats);
             }
         });

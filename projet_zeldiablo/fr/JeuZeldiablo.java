@@ -64,7 +64,7 @@ public class JeuZeldiablo implements Jeu {
             if(monstres.get(i).isDead()) monstres.remove((monstres.get(i)));
         }
 
-        if(timer < 3) timer++;
+        if(timer < 6) timer++;
         else {
             timer = 0;
             monstres.forEach(Entite::deplacer);

@@ -1,6 +1,6 @@
 *fonctionnalites
 
-fonctionnalite 1 : Refini tout le fonctionnement en remplaçant les instanceof par des méthodes dit polymorphisms.
+fonctionnalite 1 : Refini tout le fonctionnement en remplaçant les instanceof par des méthodes dit polymorphismes.
 responsable : Keanu Harrell
 
 fonctionnalité 2 : attaquer les entités

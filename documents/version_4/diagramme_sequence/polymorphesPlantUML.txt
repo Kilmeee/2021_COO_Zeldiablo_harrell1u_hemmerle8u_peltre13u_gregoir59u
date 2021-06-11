@@ -1,0 +1,37 @@
+Je vais montrer la méthode dessiner qui est une méthode polymorphes car celle-ci change selon sur quel objet on l'utilise
+
+@startuml
+participant "monstre:Monstre" as monstre
+participant "declanchable:Declanchable" as dec
+participant "vide:CaseVide" as vide
+participant "g:Graphics2D" as g
+
+[-> monstre : dessiner(Graphics2D, int i, int i1)
+activate monstre
+monstre -> g : fillOval(int, int, int, int)
+activate g
+monstre <-- g
+deactivate g
+[<-- monstre
+deactivate monstre
+
+[-> dec : dessiner(Graphics2D, int, int)
+activate dec
+dec -> g : fillRect(int, int, int, int)
+activate g
+dec <-- g
+deactivate g
+[<-- dec
+deactivate dec
+
+[-> vide : dessiner(Graphics2D, int i, int i1)
+activate vide
+vide -> g : fillRect(int, int, int, int)
+activate g
+vide <-- g
+deactivate g
+[<-- vide
+deactivate vide
+
+
+@enduml

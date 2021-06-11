@@ -17,8 +17,9 @@ responsable Yanis Peltre
 responsable : Hemmerle Gabin
 
 
--Classe
+-Classe : Deplacement, Position
 responsable : Harrell Keanu
+description : Les monstres se déplacent de manière aléatoire, ils ne sont pas attirés par le joueur
 
 
 -Classe
