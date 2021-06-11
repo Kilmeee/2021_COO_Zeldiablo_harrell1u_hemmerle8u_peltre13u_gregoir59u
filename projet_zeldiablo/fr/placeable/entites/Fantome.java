@@ -12,10 +12,16 @@ public class Fantome extends Monstre {
 
     public Fantome() {
         super();
+        this.pv = 10;
+        this.degats = 1;
+        this.timer = 3;
     }
 
     public Fantome(int x, int y) {
         super(x, y);
+        this.pv = 10;
+        this.degats = 1;
+        this.timer = 3;
     }
 
     @Override

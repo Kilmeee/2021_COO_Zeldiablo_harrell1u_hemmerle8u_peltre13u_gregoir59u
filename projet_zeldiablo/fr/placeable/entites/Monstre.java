@@ -2,24 +2,16 @@ package fr.placeable.entites;
 
 import fr.Labyrinthe;
 
-import javax.imageio.ImageIO;
-import java.awt.*;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
-
 public abstract class Monstre extends Entite {
+
+    protected int timer;
 
     public Monstre(int x, int y) {
         super(x, y);
-        this.pv = 10;
-        this.degats = 1;
     }
 
     public Monstre() {
         super();
-        this.pv = 10;
-        this.degats = 1;
     }
 
     /**
@@ -45,5 +37,9 @@ public abstract class Monstre extends Entite {
             res = true;
         }
         return res;
+    }
+
+    public void evoluer(int timer) {
+        if(timer % this.timer == 0) if(!attaquer()) deplacer();
     }
 }
