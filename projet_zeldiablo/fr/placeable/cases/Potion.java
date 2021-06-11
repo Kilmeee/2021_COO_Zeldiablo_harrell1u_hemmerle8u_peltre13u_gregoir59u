@@ -16,7 +16,7 @@ public class Potion extends Declanchable {
 
         if (!isTrouver()) trouver = true;
         e.diminuerPv(-5);
-        if(e.getPv() > 30){
+        if(e.getPv() > 20){
            e.setInitPv();
         }
     }
