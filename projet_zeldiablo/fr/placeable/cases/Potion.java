@@ -13,8 +13,12 @@ import java.io.IOException;
 public class Potion extends Declanchable {
 
     public void declencher(Entite e) {
+
         if (!isTrouver()) trouver = true;
-        e.diminuerPv(-10);
+        e.diminuerPv(-5);
+        if(e.getPv() > 30){
+           e.setInitPv();
+        }
     }
 
     @Override

@@ -101,4 +101,8 @@ public abstract class Entite extends Placeable {
         }
         return res;
     }
+
+    public void setInitPv(){
+        this.pv = 30;
+    }
 }
