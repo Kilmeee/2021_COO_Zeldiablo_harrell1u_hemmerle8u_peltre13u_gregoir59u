@@ -78,7 +78,7 @@ public class Personnage extends Entite {
 
     @Override
     public void prendreEpee() {
-        this.degats = 5;
+        this.degats = 8;
     }
 
     @Override
