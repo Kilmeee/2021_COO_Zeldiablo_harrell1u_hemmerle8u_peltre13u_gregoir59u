@@ -22,9 +22,7 @@ public class Excalibur extends Declanchable {
     }
 
     public void activerEpee(Entite e) {
-        if (!isTrouver()) {
-            if(e.prendreEpee()) trouver = true;
-        }
+        if (!isTrouver()) if(e.prendreEpee()) trouver = true;
     }
 
     @Override

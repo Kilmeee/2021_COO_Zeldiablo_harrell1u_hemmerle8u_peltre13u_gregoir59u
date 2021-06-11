@@ -9,6 +9,7 @@ import java.io.File;
 import java.io.IOException;
 
 /**
+ * @class
  * Classe héritant de Case qui est un mur donc non traversable
  */
 

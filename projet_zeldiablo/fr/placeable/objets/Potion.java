@@ -22,10 +22,7 @@ public class Potion extends Declanchable {
     }
 
     public void activerPotion(Entite e) {
-        if(!isTrouver()){
-            if(e.prendrePotion()) trouver = true;
-
-        }
+        if(!isTrouver()) if(e.prendrePotion()) trouver = true;
     }
 
     @Override
