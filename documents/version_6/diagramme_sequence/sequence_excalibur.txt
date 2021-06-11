@@ -1,0 +1,17 @@
+@startuml
+title Excalibur
+
+participant "lab:Labyrithe" as lab
+participant "epee:Excalibur" as epee
+participant "perso:Personnage" as perso
+
+
+lab -> epee : prendreEpee(Entite)
+activate epee
+epee -> perso : declencher(Entite)
+activate perso
+epee <-- perso
+deactivate perso
+lab <-- epee
+deactivate epee
+@enduml
