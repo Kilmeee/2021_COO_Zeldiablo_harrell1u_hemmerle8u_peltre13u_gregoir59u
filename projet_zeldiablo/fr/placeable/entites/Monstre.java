@@ -36,22 +36,14 @@ public abstract class Monstre extends Entite {
         return res;
     }
 
-    public void attaquer() {
+    public boolean attaquer() {
+        boolean res = false;
         Personnage personnage = jeu.getPersonnage();
         if(((personnage.getX() == x+1 || personnage.getX() == x-1) && personnage.getY() == y)
                 || ((personnage.getY() == y+1 || personnage.getY() == y-1) && personnage.getX() == x)) {
             personnage.diminuerPv(this.degats);
-            System.out.println(this.degats);
+            res = true;
         }
-    }
-
-    @Override
-    public void dessiner(Graphics2D g, int i, int i1) {
-        try{
-            BufferedImage image = ImageIO.read(new File("sprite/fantome.png"));
-            g.drawImage(image, x*Labyrinthe.TAILLE_CASE, y*Labyrinthe.TAILLE_CASE,null);
-        } catch (IOException e){
-            e.printStackTrace();
-        }
+        return res;
     }
 }
