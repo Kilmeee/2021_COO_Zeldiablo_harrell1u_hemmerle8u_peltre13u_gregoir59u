@@ -37,6 +37,12 @@ public class Personnage extends Entite {
         this.maxPv = 20;
     }
 
+    @Override
+    public boolean ajouterJeu(Labyrinthe lab) {
+        jeu.ajouterPersonnage(this);
+        return super.ajouterJeu(lab);
+    }
+
     public void attaquer(Commande c){
         jeu.getMonstres().forEach(monstre -> {
             if (c.attaquer && (((monstre.getX() == x+1 || monstre.getX() == x-1) && monstre.getY() == y)

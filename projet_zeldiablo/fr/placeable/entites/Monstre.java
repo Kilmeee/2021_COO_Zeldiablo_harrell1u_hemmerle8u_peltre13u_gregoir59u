@@ -22,8 +22,8 @@ public abstract class Monstre extends Entite {
      *      boolean
      */
     @Override
-    public boolean ajouterLab(Labyrinthe lab) {
-        boolean res = super.ajouterLab(lab);
+    public boolean ajouterJeu(Labyrinthe lab) {
+        boolean res = super.ajouterJeu(lab);
         if(res) jeu.getMonstres().add(this);
         return res;
     }

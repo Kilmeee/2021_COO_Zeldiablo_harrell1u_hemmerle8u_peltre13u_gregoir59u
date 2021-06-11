@@ -1,4 +1,4 @@
-*fonctionnalites
+!*fonctionnalites
 
 fonctionnalite 1 :
 responsable : Keanu Harrell

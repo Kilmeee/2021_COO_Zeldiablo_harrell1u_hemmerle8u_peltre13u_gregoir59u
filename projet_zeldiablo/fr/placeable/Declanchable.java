@@ -8,6 +8,7 @@ public abstract class Declanchable extends Traversable {
         trouver = false;
     }
 
+    @Override
     public boolean isTrouver(){
         return trouver;
     }
