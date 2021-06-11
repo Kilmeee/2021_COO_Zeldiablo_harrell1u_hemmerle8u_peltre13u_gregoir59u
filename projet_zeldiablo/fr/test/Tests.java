@@ -104,7 +104,16 @@ public class Tests {
         personnage.ajouterJeu(lab);
         personnage.prendreEpee();
 
-        assertEquals("Le personnage devrait avoir 5 dégâts", 5, personnage.getDegats());
+        assertEquals("Le personnage devrait avoir 8 dégâts", 8, personnage.getDegats());
+    }
+
+    @Test
+    public void test_monstre_prend_epee(){
+        Labyrinthe lab = new Labyrinthe();
+        Troll monstre = new Troll(13, 0);
+        monstre.ajouterJeu(lab);
+        monstre.prendreEpee();
+        assertEquals("Le monstre devrait avoir 5 dégâts", 5, monstre.getDegats());
     }
 
     @Test
@@ -138,25 +147,12 @@ public class Tests {
     }
 
     @Test
-    public void test_monstre_prend_epee(){
+    public void test_methode_monstre_deplacerSurEpee() {
         Labyrinthe lab = new Labyrinthe();
-        Troll monstre = new Troll(13, 0);
-        monstre.ajouterJeu(lab);
+        Monstre monstre = new Troll(13, 0);
         Commande commande = new Commande();
         commande.droite = true;
         monstre.deplacer(commande);
-        assertFalse("L'épée ne devrait pas être ramassée.", lab.getCarte()[0][14].isTrouver());
-    }
-
-    @Test
-    public void test_personnage_prend_epee(){
-        Labyrinthe lab = new Labyrinthe();
-        Personnage perso = new Personnage(13, 0);
-        perso.ajouterJeu(lab);
-        Commande commande = new Commande();
-        commande.droite = true;
-        perso.deplacer(commande);
-        assertFalse("L'épée ne devrait pas être ramassée.", lab.getCarte()[0][14].isTrouver());
     }
 
 }

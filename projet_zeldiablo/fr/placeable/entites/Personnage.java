@@ -77,12 +77,14 @@ public class Personnage extends Entite {
     }
 
     @Override
-    public void prendreEpee() {
+    public boolean prendreEpee() {
         this.degats = 8;
+        return true;
     }
 
     @Override
-    public void prendrePotion() {
+    public boolean prendrePotion() {
         ajouterPv(5);
+        return true;
     }
 }

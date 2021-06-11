@@ -18,10 +18,6 @@ public class Excalibur extends Declanchable {
 
     @Override
     public void declencher(Entite e) {
-        activerEpee(e);
-    }
-
-    public void activerEpee(Entite e) {
         if (!isTrouver()) if(e.prendreEpee()) trouver = true;
     }
 

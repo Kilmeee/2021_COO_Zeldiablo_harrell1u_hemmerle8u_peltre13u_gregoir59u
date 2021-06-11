@@ -18,10 +18,6 @@ public class Potion extends Declanchable {
 
     @Override
     public void declencher(Entite e) {
-        activerPotion(e);
-    }
-
-    public void activerPotion(Entite e) {
         if(!isTrouver()) if(e.prendrePotion()) trouver = true;
     }
 
