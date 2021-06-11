@@ -3,7 +3,6 @@ package fr.placeable;
 import fr.JeuZeldiablo;
 import fr.Labyrinthe;
 import fr.placeable.entites.Entite;
-import fr.placeable.entites.Personnage;
 
 import java.awt.*;
 
@@ -34,4 +33,7 @@ public abstract class Placeable {
 
     }
 
+    public boolean isTrouver() {
+        return false;
+    }
 }

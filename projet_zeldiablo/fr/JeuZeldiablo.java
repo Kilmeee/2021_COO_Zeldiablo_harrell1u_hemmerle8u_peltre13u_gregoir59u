@@ -3,7 +3,6 @@ package fr;
 import fr.moteurJeu.Commande;
 import fr.moteurJeu.Jeu;
 import fr.placeable.Placeable;
-import fr.placeable.Traversable;
 import fr.placeable.entites.*;
 
 import java.util.ArrayList;
@@ -39,7 +38,6 @@ public class JeuZeldiablo implements Jeu {
      */
     public JeuZeldiablo() {
         this.labyrinthe = new Labyrinthe();
-        this.personnage = new Personnage();
         monstres = new ArrayList<>();
         Placeable.setup(this, labyrinthe);
 
@@ -47,15 +45,16 @@ public class JeuZeldiablo implements Jeu {
         this.r = new Random();
         this.fini = false;
 
+        Personnage personnage = new Personnage();
 
+        personnage.ajouterJeu(labyrinthe);
 
-        personnage.ajouterLab(labyrinthe);
-        /*nouveauMonstre().ajouterLab(labyrinthe);
-        nouveauMonstre().ajouterLab(labyrinthe);
-        nouveauMonstre().ajouterLab(labyrinthe);
-        nouveauMonstre().ajouterLab(labyrinthe);
-        nouveauMonstre().ajouterLab(labyrinthe);
-        nouveauMonstre().ajouterLab(labyrinthe);*/
+        nouveauMonstre().ajouterJeu(labyrinthe);
+        nouveauMonstre().ajouterJeu(labyrinthe);
+        nouveauMonstre().ajouterJeu(labyrinthe);
+        nouveauMonstre().ajouterJeu(labyrinthe);
+        nouveauMonstre().ajouterJeu(labyrinthe);
+        nouveauMonstre().ajouterJeu(labyrinthe);
     }
 
     /**
@@ -114,5 +113,9 @@ public class JeuZeldiablo implements Jeu {
             res = new Troll(x, y);
         }
         return res;
+    }
+
+    public void ajouterPersonnage(Personnage personnage) {
+        this.personnage = personnage;
     }
 }

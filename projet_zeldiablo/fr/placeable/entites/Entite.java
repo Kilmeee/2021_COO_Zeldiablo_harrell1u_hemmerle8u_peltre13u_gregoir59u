@@ -85,6 +85,10 @@ public abstract class Entite extends Placeable {
         return this.pv;
     }
 
+    public int getDegats() {
+        return this.degats;
+    }
+
     public boolean isDead() {
         return this.dead;
     }
@@ -110,7 +114,7 @@ public abstract class Entite extends Placeable {
         }
     }
 
-    public boolean ajouterLab(Labyrinthe lab) {
+    public boolean ajouterJeu(Labyrinthe lab) {
         boolean res = false;
         if(lab.getCarte()[y][x].isCaseVide(x, y)) {
             this.lab = lab;
