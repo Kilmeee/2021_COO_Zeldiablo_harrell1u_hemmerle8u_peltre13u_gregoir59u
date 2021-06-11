@@ -1,0 +1,17 @@
+@startuml
+title Potion
+
+participant "lab:Labyrithe" as lab
+participant "potion:Potion" as pot
+participant "perso:Personnage" as perso
+
+
+lab -> pot : prendrePotion(Entite)
+activate pot
+pot -> perso : declencher(Entite)
+activate perso
+pot <-- perso
+deactivate perso
+lab <-- pot
+deactivate pot
+@enduml

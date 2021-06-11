@@ -1,30 +1,31 @@
 !*fonctionnalites
 
-fonctionnalite 1 :
+fonctionnalite 1 : Différent type de monstre : Troll et Fantome.
 responsable : Keanu Harrell
 
-fonctionnalité 2 :
+fonctionnalité 2 : Nouveau type d'objet : potion et epee.
 responsable : Gabin Hemmerle
 
-fonctionnalité 3 :
+fonctionnalité 3 : Système de victoire
 responsable : Alexis Gregoire
 
-fonctionnalité 4 :
+fonctionnalité 4 : Deuxième niveau (nouveau labyrinthe) après le premier.
 responsable Yanis Peltre
 
 *realisation
--Classe
+-Classe Potion et Excalibur
 responsable : Hemmerle Gabin
-description :
+description : Deux objets ajouté à la carte : la potion donne des Points de vie et Excalibur permet d'augmenter les points de dégats
 
--Classe :
+-Classe : Troll, Fantome et Serpent
 responsable : Harrell Keanu
-description :
+description : Les trolls sont lents et attaquent lentement mais font beaucoup de dégat. Les fantomes sont plus rapides et passent à travers les murs
+et ils ont moins de points de vie.
 
-
--Classe
+-Classe Labyrinthe
 responsable : Yanis Peltre
+description : Création d'un niveau deux : lorsqu'on arrive à la sorti du premier niveau, le niveau deux se chargent.
 
-
--Classe
+-Classe Arrivee
 responsable : Alexis Gregoire
+description : Lorsque le joueur arrive à l'arrivée (qui est par défaut cachée sur la carte) le message de victoire s'affiche et le jeu se termine.

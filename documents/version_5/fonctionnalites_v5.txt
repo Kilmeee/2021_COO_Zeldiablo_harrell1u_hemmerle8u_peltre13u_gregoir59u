@@ -6,10 +6,10 @@ responsable : Keanu Harrell
 fonctionnalité 2 : Affichage graphiques des sprites
 responsable : Gabin Hemmerle
 
-fonctionnalité 3 :
+fonctionnalité 3 : Design des sprites qui s'accordent avec le labyrinthe.
 responsable : Alexis Gregoire
 
-fonctionnalité 4 :
+fonctionnalité 4 : Aide pour déplacement aléatoire.
 responsable Yanis Peltre
 
 *realisation
@@ -22,9 +22,10 @@ responsable : Harrell Keanu
 description : Les monstres se déplacent de manière aléatoire, ils ne sont pas attirés par le joueur
 
 
--Classe
+-Classe Mur, Piege, CaseVide, Personnage, Monstre
 responsable : Yanis Peltre
+description : Design des différents type de cases
 
-
--Classe
+-Classe : Deplacement, Position
 responsable : Alexis Gregoire
+description : Les monstres se déplacent de manière aléatoire, ils ne sont pas attirés par le joueur
