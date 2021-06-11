@@ -10,7 +10,7 @@ public abstract class Entite extends Placeable {
 
     protected Labyrinthe lab;
 
-    protected int x, y, pv;
+    protected int x, y, pv, maxPv;
     protected boolean dead;
     protected int degats;
 
@@ -86,11 +86,23 @@ public abstract class Entite extends Placeable {
     }
 
     public void diminuerPv(int degats){
-        if(this.pv - degats <= 0) {
-            this.pv = 0;
-            this.dead = true;
-        } else {
-            this.pv -= degats;
+        if(degats >= 0) {
+            if(this.pv - degats <= 0) {
+                this.pv = 0;
+                this.dead = true;
+            } else {
+                this.pv -= degats;
+            }
+        }
+    }
+
+    public void ajouterPv(int pv) {
+        if(pv >= 0) {
+            if(this.pv + pv > maxPv) {
+                this.pv = maxPv;
+            } else {
+                this.pv += pv;
+            }
         }
     }
 
@@ -104,4 +116,12 @@ public abstract class Entite extends Placeable {
     }
 
     public void gagne() { }
+
+    public void prendreEpee() {
+
+    }
+
+    public void prendrePotion() {
+
+    }
 }

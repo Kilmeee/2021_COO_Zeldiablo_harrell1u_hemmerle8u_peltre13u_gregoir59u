@@ -57,4 +57,16 @@ public class Tests {
         personnageQuiBouge.deplacer(commande);
         assertEquals("La postion devrait rester à 11",1,personnageQuiBouge.getY());
     }
+
+    @Test
+    public void test_methode_attaquer() {
+        Labyrinthe lab = new Labyrinthe();
+        Monstre monstre = new Troll(0, 0);
+        Personnage personnage = new Personnage(1, 0);
+        personnage.ajouterLab(lab);
+        monstre.ajouterLab(lab);
+        assertTrue("Le troll devrait attaquer", monstre.attaquer());
+        System.out.println(personnage.getPv());
+        assertEquals("Le personnage devrait être à 15 pv", 15, personnage.getPv());
+    }
 }

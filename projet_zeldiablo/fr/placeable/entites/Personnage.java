@@ -24,6 +24,7 @@ public class Personnage extends Entite {
         super(x, y);
         this.pv = 20;
         this.arrive = false;
+        this.maxPv = 20;
     }
 
     /**
@@ -33,6 +34,7 @@ public class Personnage extends Entite {
         super();
         this.pv = 20;
         this.arrive = false;
+        this.maxPv = 20;
     }
 
     public void attaquer(Commande c){
@@ -65,17 +67,12 @@ public class Personnage extends Entite {
     }
 
     @Override
-    public void deplacer() {
-        super.deplacer();
-        System.out.println(lab.getCarte()[y][x]);
-        lab.getCarte()[y][x].prendreEpee(this);
-    }
-
-    public void setInitPv() {
-        this.pv = 20;
-    }
-
-    public void setDegat() {
+    public void prendreEpee() {
         this.degats = 5;
+    }
+
+    @Override
+    public void prendrePotion() {
+        ajouterPv(5);
     }
 }

@@ -9,6 +9,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.Random;
 
 public class Trigger extends Declanchable {
 
@@ -19,7 +20,8 @@ public class Trigger extends Declanchable {
     @Override
     public void declencher(Entite e) {
         if(!isTrouver()) trouver = true;
-        System.out.println("Case déclencheur");
+        if(new Random().nextInt(2) == 1) e.ajouterPv(5);
+        else e.diminuerPv(5);
     }
 
     @Override

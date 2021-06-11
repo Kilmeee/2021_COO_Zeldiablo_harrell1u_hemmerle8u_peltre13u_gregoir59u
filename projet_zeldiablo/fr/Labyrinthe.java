@@ -2,8 +2,8 @@ package fr;
 
 import fr.placeable.*;
 import fr.placeable.cases.*;
-import fr.placeable.entites.Monstre;
-import fr.placeable.entites.Personnage;
+import fr.placeable.objets.Excalibur;
+import fr.placeable.objets.Potion;
 
 public class Labyrinthe {
 

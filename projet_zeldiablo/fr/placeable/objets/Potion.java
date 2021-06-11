@@ -1,4 +1,4 @@
-package fr.placeable.cases;
+package fr.placeable.objets;
 
 import fr.Labyrinthe;
 import fr.placeable.Declanchable;
@@ -11,18 +11,18 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-public class Excalibur extends Declanchable {
+public class Potion extends Declanchable {
 
     @Override
     public void declencher(Entite e) {
-        prendreEpee(e);
+        prendrePotion(e);
     }
 
     @Override
-    public void prendreEpee(Personnage p) {
-        if (!isTrouver()) {
+    public void prendrePotion(Entite e) {
+        if(!isTrouver()){
             trouver = true;
-            p.setDegat();
+            e.prendrePotion();
         }
     }
 
@@ -37,7 +37,7 @@ public class Excalibur extends Declanchable {
             }
         } else {
             try {
-                BufferedImage image = ImageIO.read(new File("sprite/epee.png"));
+                BufferedImage image = ImageIO.read(new File("sprite/potion.png"));
                 g.drawImage(image, i1 * Labyrinthe.TAILLE_CASE, i * Labyrinthe.TAILLE_CASE, null);
             } catch (IOException e) {
                 e.printStackTrace();
@@ -45,4 +45,3 @@ public class Excalibur extends Declanchable {
         }
     }
 }
-

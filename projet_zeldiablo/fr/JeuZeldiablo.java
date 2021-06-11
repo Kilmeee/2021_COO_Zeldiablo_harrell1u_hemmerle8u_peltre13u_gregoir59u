@@ -50,12 +50,12 @@ public class JeuZeldiablo implements Jeu {
 
 
         personnage.ajouterLab(labyrinthe);
+        /*nouveauMonstre().ajouterLab(labyrinthe);
         nouveauMonstre().ajouterLab(labyrinthe);
         nouveauMonstre().ajouterLab(labyrinthe);
         nouveauMonstre().ajouterLab(labyrinthe);
         nouveauMonstre().ajouterLab(labyrinthe);
-        nouveauMonstre().ajouterLab(labyrinthe);
-        nouveauMonstre().ajouterLab(labyrinthe);
+        nouveauMonstre().ajouterLab(labyrinthe);*/
     }
 
     /**
@@ -113,7 +113,6 @@ public class JeuZeldiablo implements Jeu {
         } else {
             res = new Troll(x, y);
         }
-        System.out.println(random);
         return res;
     }
 }

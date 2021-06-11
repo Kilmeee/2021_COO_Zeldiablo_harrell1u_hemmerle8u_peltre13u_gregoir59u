@@ -20,10 +20,10 @@ public abstract class Placeable {
     public void declencher(Entite e) {
     }
 
-    public void prendreEpee(Personnage e){
+    public void prendreEpee(Entite e){
     }
 
-    public void prendrePotion(Personnage e){
+    public void prendrePotion(Entite e){
     }
 
     public boolean isCaseVide(int x, int y) {
