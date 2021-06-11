@@ -14,10 +14,11 @@ public class Potion extends Declanchable {
 
     public void declencher(Entite e) {
 
-        if (!isTrouver()) trouver = true;
-        e.diminuerPv(-5);
-        if(e.getPv() > 20){
-           e.setInitPv();
+        if (!isTrouver()) trouver = true {
+            e.diminuerPv(-5);
+            if (e.getPv() > 20) {
+                e.setInitPv();
+            }
         }
     }
 
