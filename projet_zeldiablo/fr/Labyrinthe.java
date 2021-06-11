@@ -1,10 +1,7 @@
 package fr;
 
 import fr.placeable.*;
-import fr.placeable.cases.CaseVide;
-import fr.placeable.cases.Mur;
-import fr.placeable.cases.Piege;
-import fr.placeable.cases.Trigger;
+import fr.placeable.cases.*;
 import fr.placeable.entites.Monstre;
 
 public class Labyrinthe {
@@ -26,6 +23,9 @@ public class Labyrinthe {
         Piege pg1 = new Piege();
         Piege pg2 = new Piege();
         Piege pg3 = new Piege();
+        Potion p1 = new Potion();
+        Potion p2 = new Potion();
+        Potion p3 = new Potion();
         Trigger tg = new Trigger();
         this.carte = new Placeable[][]{
                 {cv,cv,cv,cv,cv,cv,cv,cv,cv,mur,cv,cv,cv,cv,mur,cv,cv,mur,cv,cv},
@@ -33,10 +33,10 @@ public class Labyrinthe {
                 {cv,cv,cv,cv,cv,cv,cv,mur,cv,mur,cv,mur,cv,cv,pg3,cv,cv,mur,cv,cv},
                 {cv,mur,mur,mur,mur,mur,cv,mur,cv,mur,cv,mur,mur,mur,cv,mur,cv,mur,mur,mur},
                 {cv,mur,cv,cv,cv,mur,cv,mur,cv,cv,cv,cv,cv,mur,cv,mur,cv,cv,cv,cv},
-                {cv,mur,cv,mur,mur,mur,mur,mur,cv,mur,mur,mur,cv,mur,cv,mur,cv,mur,mur,mur},
+                {cv,mur,cv,mur,mur,mur,mur,mur,cv,mur,mur,mur,cv,mur,cv,mur,p2,mur,mur,mur},
                 {cv,cv,cv,cv,cv,cv,cv,cv,cv,mur,mur,mur,cv,mur,mur,mur,cv,cv,cv,mur},
                 {mur,cv,mur,mur,mur,mur,mur,cv,mur,mur,mur,mur,cv,mur,cv,cv,cv,mur,cv,mur},
-                {cv,cv,cv,cv,mur,cv,cv,cv,mur,cv,cv,cv,cv,mur,cv,mur,mur,mur,cv,mur},
+                {cv,cv,cv,p1,mur,cv,cv,cv,mur,p3,cv,cv,cv,mur,cv,mur,mur,mur,cv,mur},
                 {cv,mur,cv,cv,tg,cv,cv,cv,mur,cv,cv,cv,mur,mur,cv,mur,cv,cv,cv,mur},
                 {cv,mur,cv,cv,mur,cv,mur,mur,mur,mur,cv,cv,mur,mur,mur,mur,cv,mur,pg2,mur},
                 {cv,cv,cv,cv,mur,cv,cv,cv,cv,mur,cv,cv,pg1,cv,cv,cv,cv,mur,cv,cv}

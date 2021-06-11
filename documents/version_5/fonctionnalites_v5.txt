@@ -15,7 +15,7 @@ responsable Yanis Peltre
 *realisation
 -Classe
 responsable : Hemmerle Gabin
-
+description : Changement de toute les méthodes dessins pour qu'au lieu que cela affiche un cercle cela affiche un petit personnage, des murs de wsxpierre ect...
 
 -Classe : Deplacement, Position
 responsable : Harrell Keanu

@@ -30,6 +30,7 @@ abstract class Entite {
 +Entite()
 +Entite(int,int)
 +deplacer(Commande)
++deplacer()
 +getX():int
 +getY():int
 +getPv():int
